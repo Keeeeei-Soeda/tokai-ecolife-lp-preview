@@ -40,19 +40,14 @@
       return;
     }
 
-    try {
-      const key = "lpb_diagnose_log";
-      const prev = JSON.parse(localStorage.getItem(key) || "[]");
-      prev.push({
-        at: new Date().toISOString(),
-        year: year.value,
-        known: known.value,
-        maker: form.maker.value,
-        area,
-        symptoms,
-      });
-      localStorage.setItem(key, JSON.stringify(prev.slice(-50)));
-    } catch (_) {}
+    // 計測（入替版は lpb_replace_ 接頭辞）
+    window.lpTrack?.("lpb_replace_diagnose_submit", {
+      year: year.value,
+      known: known.value,
+      maker: form.maker.value,
+      area,
+      symptoms,
+    });
 
     resultWrap.hidden = false;
     if (area === "other") {

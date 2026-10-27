@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../shared/shared.css">
 </head>
 <body>
-  <div class="preview-banner" role="status">仮ページ（LP-B プレビュー）／本番未公開・検索非表示</div>
+  <div class="preview-banner" role="status">仮ページ（LP-B 入替版 プレビュー）／本番未公開・検索非表示</div>
   <header class="site-header">
     <div class="inner site-header__inner">
       <a class="site-header__brand" href="#top">東海エコライフ</a>
@@ -37,6 +38,7 @@
             <li>他社で設置された設備もご相談いただけます</li>
             <li>診断後に営業電話はしません</li>
           </ul>
+          <p class="crosslink">これから設置をお考えの方は<a href="../b-new/" data-track="lpb_replace_crosslink_click" data-track-label="to_new">こちら（設置診断）</a></p>
         </div>
       </div>
     </section>
@@ -64,24 +66,34 @@
               <tr>
                 <th>項目</th>
                 <th>初期モデル（2012年前後）</th>
-                <th>現行モデル（一般）</th>
-                <th>当社おすすめ：テスラ Powerwall</th>
+                <th>現行モデル</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>容量</td><td>平均4kWh〜10kWh</td><td>最大20kWh（単体）</td><td>【公式の最新値】</td></tr>
-              <tr><td>併設</td><td>不可が中心</td><td>2台併設可能</td><td>【公式の最新値】</td></tr>
-              <tr><td>本体寿命</td><td>約10年</td><td>20〜25年</td><td>【公式の最新値】</td></tr>
-              <tr><td>メーカー保証</td><td>10年前後</td><td>20年</td><td>【公式の最新値】</td></tr>
-              <tr><td>強み</td><td>当時水準</td><td>大幅に向上</td><td>【推奨理由：藤野さん確認後】</td></tr>
+              <tr><td>容量</td><td>平均4kWh〜10kWh</td><td>最大20kWh（単体）</td></tr>
+              <tr><td>併設</td><td>不可が中心</td><td>2台併設可能</td></tr>
+              <tr><td>本体寿命</td><td>約10年</td><td>20〜25年</td></tr>
+              <tr><td>メーカー保証</td><td>10年前後</td><td>20年</td></tr>
+              <tr><td>強み</td><td>当時水準</td><td>大幅に向上</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="placeholder-note">Powerwall列は公式サイトの最新値と、おすすめ理由の確認後に埋めます。推測の数値は入れていません。</p>
         <p class="recommend-note">
           現行モデルは容量が倍以上、メーカー保証も20年と大きく進化しました。東京都にお住まいの場合、2台併設なら補助金も2台分が対象になり得ます（条件によります。断定ではありません）。
-          当社は蓄電池8社を比較したうえで、入替先として現在は<strong>テスラ Powerwall</strong> をおすすめしています。ご家庭の電気の使い方によっては、他メーカーの方が合う場合もあり、その場合は正直にご提案します。
+          入替先のメーカーは1社に決めていません。次の「おすすめするトップ3」を中心に、ご家庭の電気の使い方やご予算に合わせて中立にご提案します。
         </p>
+      </div>
+    </section>
+
+    <section class="section" id="top3" aria-labelledby="top3-title">
+      <div class="inner">
+        <h2 id="top3-title" class="section__title">東海エコライフがおすすめするトップ3</h2>
+        <p class="section__lead">1社だけを勧めることはしません。屋根の形・ご家族の電気の使い方・ご予算に合わせて、国内外のメーカーから中立にご提案します。</p>
+        <div data-top3></div>
+        <p class="top3-more">このほかのメーカーもご相談いただけます。</p>
+        <div class="cta-block">
+          <a class="btn btn--primary" href="#diagnose" data-track="lpb_replace_top3_cta_click">入替診断を受ける（無料）</a>
+        </div>
       </div>
     </section>
 
@@ -186,7 +198,7 @@
           <div id="result-ok" hidden>
             <h3 id="result-heading"></h3>
             <p id="result-body"></p>
-            <p>正確な補助金額と、お使いの機種からの最適な入替先（当社おすすめのテスラ Powerwall を含む8社から比較）をLINEでお届けします。</p>
+            <p>正確な補助金額と、お使いの機種からの入替先の候補（トップ3を含む取扱メーカーから中立に比較）をLINEでお届けします。</p>
             <div class="result-cta">
               <a class="btn btn--line" href="https://line.me/" target="_blank" rel="noopener">LINEで詳しい診断を受け取る</a>
               <p class="tiny">当日〜翌日にご返信します（20時頃までのお問い合わせは、当日中にご返信できることがほとんどです）。営業電話はいたしません。</p>
@@ -232,7 +244,7 @@
           設置から20年が近い太陽光発電は、パワコンの寿命を迎えています。FITの買取期間が終わった今、「売る」から「貯めて使う」へ切り替えるタイミングです。パワコン交換とあわせて蓄電池を追加すると、昼につくった電気を夜に使えるようになります。
         </p>
         <p class="recommend-note">
-          パネルごと入れ替える場合は、太陽光8社を比較したうえで現在おすすめしている <strong>HESTAソーラー</strong>、蓄電池の追加には <strong>テスラ Powerwall</strong> をご提案しています。おすすめ理由は確認後に追記します。
+          パネルごと入れ替える場合も、蓄電池を追加する場合も、上の「おすすめするトップ3」を含む取扱メーカーから、屋根の形や電気の使い方に合わせてご提案します。
         </p>
       </div>
     </section>
@@ -260,7 +272,7 @@
           <details><summary>診断を受けたら営業の電話が来ますか</summary><p>診断後に営業電話はしません。ご連絡はLINE（またはお客様が選んだ連絡方法）で行い、訪問はご希望の場合のみです。</p></details>
           <details><summary>他社で設置した蓄電池でも入替できますか</summary><p>できます。</p></details>
           <details><summary>メーカーが違っても対応できますか</summary><p>できます。取扱8社から最適を選定します。</p></details>
-          <details><summary>おすすめの入替先はありますか</summary><p>8社を比較したうえで、現在はテスラ Powerwallです。電気の使い方により他社もご提案します。</p></details>
+          <details><summary>おすすめの入替先はありますか</summary><p>1社には決めていません。太陽光・蓄電池それぞれのトップ3を含む取扱メーカーから、電気の使い方やご予算に合わせて中立にご提案します。</p></details>
           <details><summary>古い設備の処分もお願いできますか</summary><p>撤去・処分まで対応します。</p></details>
           <details><summary>今の蓄電池、あと何年使えますか</summary><p>設置時期と症状から、診断で目安をお伝えします。</p></details>
           <details><summary>補助金は本当に使えますか</summary><p>設置から6年経過で申請が可能になることが多いです。金額は容量・時期・予算残によります。「満額」はお約束しません。</p></details>
@@ -288,6 +300,7 @@
         <h2 id="final-title" class="section__title">その設備、まだ替えなくていいのか。まずは診断から。</h2>
         <p class="section__lead">設置時期を入れるだけ。無理な買い替えはおすすめしません。<br>今のままで良ければ、そのままで構いません。</p>
         <a class="btn btn--primary" href="#diagnose">入替診断を受ける（無料）</a>
+        <p class="crosslink">これから太陽光・蓄電池を付ける方は<a href="../b-new/" data-track="lpb_replace_crosslink_click" data-track-label="to_new_final">設置診断へ</a></p>
         <ul class="hero__trust hero__trust--center">
           <li>営業電話はしません</li>
           <li>訪問はご希望の場合のみ</li>
@@ -308,9 +321,11 @@
     </section>
   </main>
   <footer class="site-footer">
-    <div class="inner"><p>© 東海エコライフ　LP-B プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p></div>
+    <div class="inner"><p>© 東海エコライフ　LP-B 入替版 プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p></div>
   </footer>
   <a class="sticky-cta" href="#diagnose">入替診断を受ける</a>
+  <script src="../shared/track.js"></script>
+  <script src="../shared/top3.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

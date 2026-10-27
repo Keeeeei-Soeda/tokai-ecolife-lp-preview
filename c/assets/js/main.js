@@ -7,14 +7,12 @@
   const sticky = document.querySelector(".sticky-cta");
   const diagnoseSection = document.getElementById("diagnose");
 
+  // お悩みカードのクリック計測（結露・カビ／防犯を含む5枚）
   document.querySelectorAll(".worry-card").forEach((card) => {
     card.addEventListener("click", () => {
-      try {
-        const key = "lpc_worry_click";
-        const prev = JSON.parse(localStorage.getItem(key) || "[]");
-        prev.push({ at: new Date().toISOString(), worry: card.textContent.trim() });
-        localStorage.setItem(key, JSON.stringify(prev.slice(-50)));
-      } catch (_) {}
+      window.lpTrack?.("lpc_worry_click", {
+        worry: card.dataset.worry || card.textContent.trim(),
+      });
     });
   });
 
@@ -44,17 +42,11 @@
       return;
     }
 
-    try {
-      const key = "lpc_diagnose_log";
-      const prev = JSON.parse(localStorage.getItem(key) || "[]");
-      prev.push({
-        at: new Date().toISOString(),
-        worries,
-        count: count.value,
-        area,
-      });
-      localStorage.setItem(key, JSON.stringify(prev.slice(-50)));
-    } catch (_) {}
+    window.lpTrack?.("lpc_diagnose_submit", {
+      worries,
+      count: count.value,
+      area,
+    });
 
     resultWrap.hidden = false;
     if (area === "other") {
