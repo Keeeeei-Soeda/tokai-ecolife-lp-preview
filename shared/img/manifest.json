@@ -1,0 +1,122 @@
+{
+  "a1": {
+    "file": "../shared/img/cases/a1.jpg",
+    "file_from_root": "shared/img/cases/a1.jpg",
+    "area": "八王子市",
+    "title": "K様（東京都八王子市） 太陽光発電・蓄電池・創蓄連携システムの施工事例",
+    "kind": "solar-battery",
+    "maker": "カナディアン・ソーラー",
+    "url": "https://www.tokai-ecolife.com/case/k%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e5%85%ab%e7%8e%8b%e5%ad%90%e5%b8%82%ef%bc%89-%e5%a4%aa%e9%99%bd%e5%85%89%e7%99%ba%e9%9b%bb%e3%83%bb%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e5%89%b5%e8%93%84/",
+    "source": "ftp:/wp-content/uploads/2026/07/LINE_ALBUM_517-木下-様邸_260701_4.jpg"
+  },
+  "a2": {
+    "file": "../shared/img/cases/a2.jpg",
+    "file_from_root": "shared/img/cases/a2.jpg",
+    "area": "青梅市",
+    "title": "M様（東京都青梅市） 蓄電池の施工事例",
+    "kind": "battery",
+    "maker": "DMM.com",
+    "url": "https://www.tokai-ecolife.com/case/m%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e9%9d%92%e6%a2%85%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b%e4%be%8b/",
+    "source": "ftp:/wp-content/uploads/2026/07/LINE_ALBUM_東海ｴｺﾗｲﾌ牧野邸BT増設（623）_250625_16-1.jpg"
+  },
+  "a3": {
+    "file": "../shared/img/cases/a3.jpg",
+    "file_from_root": "shared/img/cases/a3.jpg",
+    "area": "日野市",
+    "title": "Ｋ様（東京都日野市） 蓄電池・オール電化の施工事例",
+    "kind": "battery",
+    "maker": "長州産業",
+    "url": "https://www.tokai-ecolife.com/case/%ef%bd%8b%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e6%97%a5%e9%87%8e%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e3%82%aa%e3%83%bc%e3%83%ab%e9%9b%bb%e5%8c%96%e3%81%ae%e6%96%bd%e5%b7%a5/",
+    "source": "ftp:/wp-content/uploads/2026/06/20250909-144209-273.jpg"
+  },
+  "b1": {
+    "file": "../shared/img/cases/b1.jpg",
+    "file_from_root": "shared/img/cases/b1.jpg",
+    "area": "八王子市",
+    "title": "K様（東京都八王子市） 太陽光発電・蓄電池・創蓄連携システムの施工事例",
+    "kind": "solar-battery",
+    "maker": "カナディアン・ソーラー",
+    "url": "https://www.tokai-ecolife.com/case/k%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e5%85%ab%e7%8e%8b%e5%ad%90%e5%b8%82%ef%bc%89-%e5%a4%aa%e9%99%bd%e5%85%89%e7%99%ba%e9%9b%bb%e3%83%bb%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e5%89%b5%e8%93%84/",
+    "source": "ftp:/wp-content/uploads/2026/07/LINE_ALBUM_517-木下-様邸_260701_4.jpg"
+  },
+  "b2": {
+    "file": "../shared/img/cases/b2.jpg",
+    "file_from_root": "shared/img/cases/b2.jpg",
+    "area": "小平市",
+    "title": "Y様（東京都小平市） 太陽光発電・蓄電池・創蓄連携システムの施工事例",
+    "kind": "solar-battery",
+    "maker": "ネクストエナジー",
+    "url": "https://www.tokai-ecolife.com/case/y%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e5%b0%8f%e5%b9%b3%e5%b8%82%ef%bc%89-%e5%a4%aa%e9%99%bd%e5%85%89%e7%99%ba%e9%9b%bb%e3%83%bb%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e5%89%b5%e8%93%84%e9%80%a3/",
+    "source": "ftp:/wp-content/uploads/2026/06/pxl_20250822_060418007.jpg"
+  },
+  "b3": {
+    "file": "../shared/img/cases/b3.jpg",
+    "file_from_root": "shared/img/cases/b3.jpg",
+    "area": "青梅市",
+    "title": "M様（東京都青梅市） 蓄電池の施工事例",
+    "kind": "battery",
+    "maker": "DMM.com",
+    "url": "https://www.tokai-ecolife.com/case/m%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e9%9d%92%e6%a2%85%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b%e4%be%8b/",
+    "source": "ftp:/wp-content/uploads/2026/07/LINE_ALBUM_東海ｴｺﾗｲﾌ牧野邸BT増設（623）_250625_16-1.jpg"
+  },
+  "d1": {
+    "file": "../shared/img/cases/d1.jpg",
+    "file_from_root": "shared/img/cases/d1.jpg",
+    "area": "あきる野市",
+    "title": "S様（東京都あきる野市） オール電化の施工事例",
+    "kind": "ecocute",
+    "maker": "三菱",
+    "url": "https://www.tokai-ecolife.com/case/s%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e3%81%82%e3%81%8d%e3%82%8b%e9%87%8e%e5%b8%82%ef%bc%89-%e3%82%aa%e3%83%bc%e3%83%ab%e9%9b%bb%e5%8c%96%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b%e4%be%8b/",
+    "source": "ftp:/wp-content/uploads/2026/06/pxl_20251015_072632204.jpg"
+  },
+  "d2": {
+    "file": "../shared/img/cases/d2.jpg",
+    "file_from_root": "shared/img/cases/d2.jpg",
+    "area": "日野市",
+    "title": "Ｋ様（東京都日野市） 蓄電池・オール電化の施工事例",
+    "kind": "battery",
+    "maker": "長州産業",
+    "url": "https://www.tokai-ecolife.com/case/%ef%bd%8b%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e6%97%a5%e9%87%8e%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e3%82%aa%e3%83%bc%e3%83%ab%e9%9b%bb%e5%8c%96%e3%81%ae%e6%96%bd%e5%b7%a5/",
+    "source": "ftp:/wp-content/uploads/2026/06/20250909-144209-273.jpg"
+  },
+  "d3": {
+    "file": "../shared/img/cases/d3.jpg",
+    "file_from_root": "shared/img/cases/d3.jpg",
+    "area": "小平市",
+    "title": "O様（東京都小平市） 蓄電池・オール電化の施工事例",
+    "kind": "battery",
+    "maker": "長州産業",
+    "url": "https://www.tokai-ecolife.com/case/o%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e5%b0%8f%e5%b9%b3%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e3%82%aa%e3%83%bc%e3%83%ab%e9%9b%bb%e5%8c%96%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b/",
+    "source": "ftp:/wp-content/uploads/2026/06/LINE_ALBUM_東海ｴｺﾗｲﾌ-大島邸-電気工事827_250827_12.jpg"
+  },
+  "d4": {
+    "file": "../shared/img/cases/d4.jpg",
+    "file_from_root": "shared/img/cases/d4.jpg",
+    "area": "西多摩郡",
+    "title": "Y様（東京都西多摩郡） 蓄電池の施工事例",
+    "kind": "battery",
+    "maker": "ニチコン",
+    "url": "https://www.tokai-ecolife.com/case/y%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e8%a5%bf%e5%a4%9a%e6%91%a9%e9%83%a1%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b%e4%be%8b/",
+    "source": "ftp:/wp-content/uploads/2026/06/LINE_ALBUM_20251227-吉村様邸工事_260203_12.jpg"
+  },
+  "d5": {
+    "file": "../shared/img/cases/d5.jpg",
+    "file_from_root": "shared/img/cases/d5.jpg",
+    "area": "東久留米市",
+    "title": "T様（東京都東久留米市） 蓄電池の施工事例",
+    "kind": "battery",
+    "maker": "ニチコン",
+    "url": "https://www.tokai-ecolife.com/case/t%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e6%9d%b1%e4%b9%85%e7%95%99%e7%b1%b3%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b%e4%be%8b/",
+    "source": "ftp:/wp-content/uploads/2026/07/LINE_ALBUM_2026415-竹村-洋介様邸BT増設工事_260430_3.jpg"
+  },
+  "d6": {
+    "file": "../shared/img/cases/d6.jpg",
+    "file_from_root": "shared/img/cases/d6.jpg",
+    "area": "小平市",
+    "title": "O様（東京都小平市） 蓄電池・オール電化の施工事例",
+    "kind": "battery",
+    "maker": "長州産業",
+    "url": "https://www.tokai-ecolife.com/case/o%e6%a7%98%ef%bc%88%e6%9d%b1%e4%ba%ac%e9%83%bd%e5%b0%8f%e5%b9%b3%e5%b8%82%ef%bc%89-%e8%93%84%e9%9b%bb%e6%b1%a0%e3%83%bb%e3%82%aa%e3%83%bc%e3%83%ab%e9%9b%bb%e5%8c%96%e3%81%ae%e6%96%bd%e5%b7%a5%e4%ba%8b/",
+    "source": "ftp:/wp-content/uploads/2026/06/LINE_ALBUM_東海ｴｺﾗｲﾌ-大島邸-電気工事827_250827_12.jpg"
+  }
+}

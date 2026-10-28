@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="../shared/shared.css">
 </head>
 <body>
   <div class="preview-banner" role="status">
@@ -43,12 +44,11 @@
             <li>診断後に営業電話はしません</li>
           </ul>
         </div>
-        <div class="hero__visual" aria-hidden="true">
-          <div class="character-card">
-            <div class="character-card__face">診</div>
-            <p class="character-card__name">補助金先生</p>
-            <p class="character-card__note">※キャラクター画像は素材確定後に差し替え</p>
-          </div>
+        <div class="hero__visual">
+          <figure class="hero-photo">
+            <img src="../shared/img/stock/solar_roof.jpg" alt="屋根に設置された太陽光パネルのイメージ" width="720" height="900" loading="eager">
+          </figure>
+          <p class="hero-photo__cap">※イメージ写真です（施工事例は下のセクション）</p>
         </div>
       </div>
     </section>
@@ -358,30 +358,34 @@
         <p class="section__lead">ご提案・補助金申請・工事手配まで対応した事例です（公開中の事例のみ）。</p>
         <div class="case-grid">
           <article class="case-card">
+            <div class="case-card__media">
+              <img class="case-card__img" src="../shared/img/cases/a1.jpg" alt="八王子市 K様邸の施工写真" loading="lazy" width="800" height="600">
+            </div>
             <p class="case-card__area">八王子市</p>
-            <p>設備構成・容量・メーカー：【Instagram投稿から収集】</p>
-            <p>使った制度：【収集後に記載】</p>
-            <p>補助金額：【了承済みの場合のみ】</p>
-            <p class="tiny">導入時期・工期：【収集後に記載】</p>
+            <p>太陽光発電・蓄電池・創蓄連携（カナディアン・ソーラー）</p>
+            <p class="tiny"><a href="https://www.tokai-ecolife.com/casestudy/" target="_blank" rel="noopener">施工事例ページで詳細を見る</a></p>
           </article>
           <article class="case-card">
+            <div class="case-card__media">
+              <img class="case-card__img" src="../shared/img/cases/a2.jpg" alt="青梅市 M様邸の施工写真" loading="lazy" width="800" height="600">
+            </div>
             <p class="case-card__area">青梅市</p>
-            <p>設備構成・容量・メーカー：【Instagram投稿から収集】</p>
-            <p>使った制度：【収集後に記載】</p>
-            <p>補助金額：【了承済みの場合のみ】</p>
-            <p class="tiny">導入時期・工期：【収集後に記載】</p>
+            <p>蓄電池（DMM.com）</p>
+            <p class="tiny"><a href="https://www.tokai-ecolife.com/casestudy/" target="_blank" rel="noopener">施工事例ページで詳細を見る</a></p>
           </article>
           <article class="case-card">
-            <p class="case-card__area">昭島市</p>
-            <p>設備構成・容量・メーカー：【Instagram投稿から収集】</p>
-            <p>使った制度：【収集後に記載】</p>
-            <p>補助金額：【了承済みの場合のみ】</p>
-            <p class="tiny">導入時期・工期：【収集後に記載】</p>
+            <div class="case-card__media">
+              <img class="case-card__img" src="../shared/img/cases/a3.jpg" alt="日野市 K様邸の施工写真" loading="lazy" width="800" height="600">
+            </div>
+            <p class="case-card__area">日野市</p>
+            <p>蓄電池・オール電化（長州産業）</p>
+            <p class="tiny"><a href="https://www.tokai-ecolife.com/casestudy/" target="_blank" rel="noopener">施工事例ページで詳細を見る</a></p>
           </article>
         </div>
         <p class="section__note">
-          費用や補助金額など、詳しくはお気軽にお問い合わせください。ここに掲載しきれない過去の事例もございます。
+          費用や補助金額など、詳しくはお気軽にお問い合わせください。ここに掲載しきれない過去の事例もございます。写真は公式HPの公開事例です。
         </p>
+        <p class="img-credit">フリー素材（ヒーロー）：Unsplash／施工写真：自社HP施工事例より</p>
       </div>
     </section>
 
