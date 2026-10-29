@@ -1,13 +1,20 @@
 /*
- * おすすめメーカー トップ3（LP-B 入替版・新規設置版で共通）
+ * 人気順位TOP3（LP-B 入替版・新規設置版で共通）
  *
  * 型番・写真・特徴文の差し替えは、このファイルのデータだけを編集すれば反映される。
- * HTML 側は <div data-top3></div> を置くだけ。
+ * items の並び順がそのまま人気順位（1位・2位・3位）になる。
  *
- * ルール（修正指示書②）
+ * HTML 側の置き方
+ *   <div data-top3></div>                 … 太陽光・蓄電池の両方を表示（従来どおり）
+ *   <div data-top3="battery"></div>       … 蓄電池だけ
+ *   <div data-top3="solar"></div>         … 太陽光だけ
+ *   data-top3-heading="none" を付けると、ブロック見出し（「太陽光」等）を出さない
+ *
+ * ルール
  * - 6カードは同じサイズ・同じ情報量。特定カードだけ大きくしない
- * - badge は "NEW"（新商品の意味）のみ。「一押し」「No.1」などの順位表現は使わない
- * - 特徴文・補助金表示は確定事項のみ。未確定は【…】のプレースホルダーのまま
+ * - 順位は営業打合せ（2026-10）で決定した人気順。表記は「人気順位TOP3」で統一
+ * - badge は "NEW"（新商品の意味）のみ
+ * - 特徴文・補助金表示はメーカー公式情報などで確認できた事項のみ。未確定は【…】のまま
  * - image にはカタログ由来の画像パスを入れる。null の間はプレースホルダー枠を表示
  */
 window.TOP3_MAKERS = {
@@ -15,33 +22,42 @@ window.TOP3_MAKERS = {
     title: "太陽光",
     items: [
       {
-        maker: "パナソニック",
-        product: "【型番：受領待ち】",
-        badge: null,
-        feature: "【カタログから記載】",
+        maker: "HESTAソーラー",
+        product: "HESTAソーラー（1枚440W）",
+        badge: "NEW",
+        // 出典：https://hestasolar.com/
+        feature: "貼り付けて設置する方式で、基本的に屋根へ穴を開けません。出力保証25年。※瓦屋根不可",
+        specs: [],
         forWho: "【カタログから記載】",
         subsidy: null,
+        url: "https://hestasolar.com/",
         // 製品カタログ写真は許諾前のため、フリー素材のイメージ写真を仮置き
         image: "../shared/img/stock/solar_panel.jpg",
         imageLabel: "太陽光パネルのイメージ",
       },
       {
         maker: "カナディアンソーラー",
-        product: "【型番：受領待ち】",
+        product: "TOPHiKu6シリーズ（住宅用）",
         badge: null,
-        feature: "【カタログから記載】",
+        // 出典：https://csisolar.co.jp/tax_products/module/
+        feature: "出力310〜465Wの4機種。モジュール変換効率は最大23.3%（CS6.2-48TM-465）。",
+        specs: [],
         forWho: "【カタログから記載】",
         subsidy: null,
+        url: "https://csisolar.co.jp/tax_products/module/",
         image: "../shared/img/stock/solar_roof.jpg",
         imageLabel: "太陽光パネルのイメージ",
       },
       {
-        maker: "ヘスタソーラー",
-        product: "【型番：受領待ち】",
-        badge: "NEW",
-        feature: "接着で設置。屋根に穴を開けず、壁やカーポートにも。※瓦屋根不可",
+        maker: "パナソニック",
+        // 型番・特徴はWebカタログ（VBCT1B211 p.9 / VBCT1M256 p.28）から記載予定
+        product: "【型番：カタログから記載】",
+        badge: null,
+        feature: "【カタログから記載】",
+        specs: [],
         forWho: "【カタログから記載】",
         subsidy: null,
+        url: "https://esctlg.panasonic.biz/iportal/oc.do?c=VBCT1B211&p=9&v=PEWJ0001&d=activeOut",
         image: "../shared/img/stock/solar_panel.jpg",
         imageLabel: "太陽光パネルのイメージ",
       },
@@ -51,33 +67,46 @@ window.TOP3_MAKERS = {
     title: "蓄電池",
     items: [
       {
-        maker: "ニチコン",
-        product: "【型番：受領待ち】",
-        badge: null,
-        feature: "【カタログから記載】",
-        forWho: "【カタログから記載】",
-        subsidy: null,
-        image: "../shared/img/stock/outdoor_unit.jpg",
-        imageLabel: "蓄電・設備のイメージ",
-      },
-      {
         maker: "テスラ",
-        product: "パワーウォール3",
+        product: "Powerwall 3",
         badge: "NEW",
-        feature: "2026年10月登場の新型。",
+        // 出典：https://www.tesla.com/ja_jp/powerwall ／ 容量・出力・保証は日本発売時の報道（Impress Watch 2026-08）
+        feature: "容量13.5kWh・定格出力9.69kW。パワコン内蔵のオールインワン型で、停電時も家全体に給電します。",
+        specs: [],
         forWho: "【カタログから記載】",
-        // SII 登録状況は公開前に要確認（素材待ち #3）
-        subsidy: "国・東京都の補助金対象（SII登録）",
+        subsidy: "国・東京都の補助金対象（SII登録済み）",
+        url: "https://www.tesla.com/ja_jp/powerwall",
         image: "../shared/img/stock/house_exterior.jpg",
         imageLabel: "住宅設備のイメージ",
       },
       {
-        maker: "オムロン",
-        product: "【型番：受領待ち】",
+        maker: "ニチコン",
+        product: "ESS-T5／ESS-T6シリーズ",
         badge: null,
-        feature: "【カタログから記載】",
+        // 出典：営業打合せでの指示（よく出ている4構成）。https://www.nichicon.co.jp/products/ess/t5t6system/
+        feature: "7.4〜19.9kWhの4構成から選べます。19.9kWhは家庭用として業界最大級。",
+        specs: [
+          "ES-CSM｜7.4kWh｜屋外",
+          "ES-DYL｜9.9kWh｜屋内外",
+          "ES-CSM＋ES-CSX｜14.9kWh｜屋外",
+          "ES-DYL＋ES-DYL｜19.9kWh｜屋内外",
+        ],
         forWho: "【カタログから記載】",
         subsidy: null,
+        url: "https://www.nichicon.co.jp/products/ess/t5t6system/",
+        image: "../shared/img/stock/outdoor_unit.jpg",
+        imageLabel: "蓄電・設備のイメージ",
+      },
+      {
+        maker: "オムロン・長州産業",
+        product: "マルチ蓄電プラットフォーム KPBP-Aシリーズ",
+        badge: null,
+        // 出典：https://socialsolution.omron.com/jp/ja/products_service/energy/product/bt/kpbp.html
+        feature: "6.3〜16.4kWhから容量を選べます。屋内・屋外どちらにも設置でき、全負荷型・特定負荷型に対応。",
+        specs: [],
+        forWho: "【カタログから記載】",
+        subsidy: null,
+        url: "https://socialsolution.omron.com/jp/ja/products_service/energy/product/bt/kpbp.html",
         image: "../shared/img/stock/outdoor_unit.jpg",
         imageLabel: "蓄電・設備のイメージ",
       },
@@ -89,32 +118,41 @@ window.TOP3_MAKERS = {
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-  function card(item) {
+  function card(item, index) {
     const media = item.image
-      ? `<img class="top3-card__img" src="${esc(item.image)}" alt="${esc(item.maker)} ${esc(item.product)}" loading="lazy">`
+      ? `<img class="top3-card__img" src="${esc(item.image)}" alt="${esc(item.maker)} ${esc(item.product)}（イメージ）" loading="lazy">`
       : `<div class="ph-img top3-card__img" role="img" aria-label="${esc(item.imageLabel)}">${esc(item.imageLabel)}</div>`;
+    const specs = item.specs && item.specs.length
+      ? `<ul class="top3-card__specs">${item.specs.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>`
+      : "";
     return `
       <article class="top3-card">
         <div class="top3-card__media">
           ${media}
           ${item.badge ? `<span class="top3-card__badge">${esc(item.badge)}</span>` : ""}
         </div>
+        <p class="top3-card__rank">人気${index + 1}位</p>
         <p class="top3-card__maker">${esc(item.maker)}</p>
         <p class="top3-card__product">${esc(item.product)}</p>
         <p class="top3-card__feature">${esc(item.feature)}</p>
+        ${specs}
         <p class="top3-card__who"><span>こんな方に</span>${esc(item.forWho)}</p>
         ${item.subsidy ? `<p class="top3-card__subsidy">${esc(item.subsidy)}</p>` : ""}
+        ${item.url ? `<a class="top3-card__link" href="${esc(item.url)}" target="_blank" rel="noopener">メーカー公式の製品情報</a>` : ""}
       </article>`;
   }
 
   function render(root) {
     const data = window.TOP3_MAKERS;
-    root.innerHTML = ["solar", "battery"]
+    const only = root.dataset.top3;
+    const keys = only === "solar" || only === "battery" ? [only] : ["solar", "battery"];
+    const showHeading = root.dataset.top3Heading !== "none";
+    root.innerHTML = keys
       .map((key) => {
         const block = data[key];
         return `
           <div class="top3-block">
-            <h3 class="top3-block__title">${esc(block.title)}</h3>
+            ${showHeading ? `<h3 class="top3-block__title">${esc(block.title)}</h3>` : ""}
             <div class="top3-grid">${block.items.map(card).join("")}</div>
           </div>`;
       })

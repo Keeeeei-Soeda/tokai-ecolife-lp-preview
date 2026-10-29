@@ -305,6 +305,35 @@
   color: var(--green-dark);
 }
 
+/* 人気順位・構成一覧・公式リンク（2026-10 追加） */
+.top3-card__rank {
+  margin: 0 0 2px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--green-dark);
+}
+
+.top3-card__specs {
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.top3-card__specs li {
+  padding: 4px 0;
+  border-top: 1px dashed var(--line);
+}
+
+.top3-card__link {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
 .top3-more {
   margin: 24px 0 0;
   text-align: center;
