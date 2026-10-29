@@ -16,6 +16,8 @@
  * - badge は "NEW"（新商品の意味）のみ
  * - 特徴文・補助金表示はメーカー公式情報などで確認できた事項のみ。未確定は【…】のまま
  * - image にはカタログ由来の画像パスを入れる。null の間はプレースホルダー枠を表示
+ * - imageFit: "contain" … 白背景の製品写真や文字入り画像を、切り抜かずに全体表示する
+ * - imageIsStock: true … フリー素材の仮画像（alt に「イメージ」と付ける）
  */
 window.TOP3_MAKERS = {
   solar: {
@@ -34,6 +36,7 @@ window.TOP3_MAKERS = {
         // 製品カタログ写真は許諾前のため、フリー素材のイメージ写真を仮置き
         image: "../shared/img/stock/solar_panel.jpg",
         imageLabel: "太陽光パネルのイメージ",
+        imageIsStock: true,
       },
       {
         maker: "カナディアンソーラー",
@@ -47,6 +50,7 @@ window.TOP3_MAKERS = {
         url: "https://csisolar.co.jp/tax_products/module/",
         image: "../shared/img/stock/solar_roof.jpg",
         imageLabel: "太陽光パネルのイメージ",
+        imageIsStock: true,
       },
       {
         maker: "パナソニック",
@@ -60,6 +64,7 @@ window.TOP3_MAKERS = {
         url: "https://esctlg.panasonic.biz/iportal/oc.do?c=VBCT1B211&p=9&v=PEWJ0001&d=activeOut",
         image: "../shared/img/stock/solar_panel.jpg",
         imageLabel: "太陽光パネルのイメージ",
+        imageIsStock: true,
       },
     ],
   },
@@ -76,8 +81,10 @@ window.TOP3_MAKERS = {
         forWho: "【カタログから記載】",
         subsidy: "国・東京都の補助金対象（SII登録済み）",
         url: "https://www.tesla.com/ja_jp/powerwall",
-        image: "../shared/img/stock/house_exterior.jpg",
-        imageLabel: "住宅設備のイメージ",
+        // 製品写真：東海エコライフより受領（2026-10-30、メーカー公式サイト掲載画像）
+        image: "../shared/img/products/tesla-powerwall3.jpg",
+        imageFit: "cover",
+        imageLabel: "Powerwall 3 の設置イメージ",
       },
       {
         maker: "ニチコン",
@@ -94,8 +101,10 @@ window.TOP3_MAKERS = {
         forWho: "【カタログから記載】",
         subsidy: null,
         url: "https://www.nichicon.co.jp/products/ess/t5t6system/",
-        image: "../shared/img/stock/outdoor_unit.jpg",
-        imageLabel: "蓄電・設備のイメージ",
+        // 製品写真：東海エコライフより受領（2026-10-30、メーカー公式サイト掲載画像）
+        image: "../shared/img/products/nichicon-ess.jpg",
+        imageFit: "contain",
+        imageLabel: "ESS-T5／T6シリーズ 蓄電池ユニット",
       },
       {
         maker: "オムロン・長州産業",
@@ -107,8 +116,10 @@ window.TOP3_MAKERS = {
         forWho: "【カタログから記載】",
         subsidy: null,
         url: "https://socialsolution.omron.com/jp/ja/products_service/energy/product/bt/kpbp.html",
-        image: "../shared/img/stock/outdoor_unit.jpg",
-        imageLabel: "蓄電・設備のイメージ",
+        // 製品写真：東海エコライフより受領（2026-10-30、メーカー公式サイト掲載画像）
+        image: "../shared/img/products/omron-kpbp-9kwh.jpg",
+        imageFit: "contain",
+        imageLabel: "KPBP-Aシリーズ 9.7kWh（KP-BU97C-A）",
       },
     ],
   },
@@ -119,8 +130,10 @@ window.TOP3_MAKERS = {
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
   function card(item, index) {
+    const fitClass = item.imageFit === "contain" ? " top3-card__img--contain" : "";
+    const alt = item.imageIsStock ? `${item.maker} ${item.product}（イメージ）` : `${item.maker} ${item.imageLabel || item.product}`;
     const media = item.image
-      ? `<img class="top3-card__img" src="${esc(item.image)}" alt="${esc(item.maker)} ${esc(item.product)}（イメージ）" loading="lazy">`
+      ? `<img class="top3-card__img${fitClass}" src="${esc(item.image)}" alt="${esc(alt)}" loading="lazy">`
       : `<div class="ph-img top3-card__img" role="img" aria-label="${esc(item.imageLabel)}">${esc(item.imageLabel)}</div>`;
     const specs = item.specs && item.specs.length
       ? `<ul class="top3-card__specs">${item.specs.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>`

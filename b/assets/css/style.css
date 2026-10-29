@@ -400,6 +400,8 @@ ul, ol { margin: 0; padding: 0; }
 .top3-area .top3-card > *:not(.top3-card__media) { margin-left: 22px; margin-right: 22px; }
 .top3-area .top3-card__media { margin: 0 0 18px; background: var(--ink-soft); }
 .top3-area .top3-card__img { aspect-ratio: 3 / 2; object-fit: cover; border-radius: 0; }
+.top3-area .top3-card__img--contain { object-fit: contain; background: var(--white); padding: 12px; }
+.top3-area .top3-card__media:has(.top3-card__img--contain) { background: var(--white); border-bottom: 1px solid var(--line); }
 .top3-area .top3-card__badge { top: 12px; left: 12px; background: var(--sun); color: var(--ink); }
 .top3-area .top3-card__rank {
   align-self: flex-start;

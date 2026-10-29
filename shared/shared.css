@@ -397,6 +397,11 @@
   color: var(--green-dark);
 }
 
+.top3-card__img--contain {
+  object-fit: contain;
+  background: #fff;
+}
+
 img.top3-card__img {
   display: block;
 }
