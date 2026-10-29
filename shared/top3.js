@@ -64,9 +64,10 @@ window.TOP3_MAKERS = {
         forWho: "【カタログから記載】",
         subsidy: null,
         url: "https://esctlg.panasonic.biz/iportal/oc.do?c=VBCT1B211&p=9&v=PEWJ0001&d=activeOut",
-        image: "../shared/img/stock/solar_panel.jpg",
-        imageLabel: "太陽光パネルのイメージ",
-        imageIsStock: true,
+        // 製品写真：東海エコライフより受領（2026-10-30）。太陽電池モジュール・パワーステーション・蓄電池ユニットの構成図
+        image: "../shared/img/products/panasonic-system.jpg",
+        imageFit: "contain",
+        imageLabel: "太陽電池モジュールとパワーステーション・蓄電池ユニットの構成",
       },
     ],
   },
