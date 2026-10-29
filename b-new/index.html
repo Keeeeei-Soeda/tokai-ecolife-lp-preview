@@ -4,51 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>【仮】太陽光・蓄電池の設置診断｜東海エコライフ</title>
-  <meta name="description" content="屋根に穴を開けない太陽光と、新型蓄電池。国内メーカーも含めて、お住まいに合う組み合わせを中立にご提案します。補助金もわかる設置診断（無料）。東京都内全域。">
+  <meta name="description" content="屋根に穴を開けない太陽光と新型蓄電池。設置診断は無料、補助金の申請は当社が代行。東京都内全域。診断後に営業電話はしません。">
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+  <!-- 共通CSSを先に読み込み、新規設置版のCSSで上書きする -->
   <link rel="stylesheet" href="../shared/shared.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <div class="preview-banner" role="status">仮ページ（LP-B 新規設置版 プレビュー）／本番未公開・検索非表示</div>
-  <header class="site-header">
-    <div class="inner site-header__inner">
-      <a class="site-header__brand" href="#top">東海エコライフ</a>
-      <p class="site-header__meta">八王子支店　042-652-9777</p>
+
+  <!-- ===================== ヘッダー ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-header__brand" href="#top">東海エコライフ<span>八王子支店</span></a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="gnav">メニュー</button>
+      <nav class="gnav" id="gnav" aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#news">新製品</a></li>
+          <li><a href="#top3">人気順位TOP3</a></li>
+          <li><a href="#subsidy">補助金</a></li>
+          <li><a href="#cases">施工事例</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__tel num" href="tel:0426529777">042-652-9777</a>
+      <a class="btn btn--primary site-header__cta" href="#diagnose" data-track="lpb_new_header_cta_click">設置診断（無料）</a>
     </div>
   </header>
 
   <main id="top">
-    <!-- S1 ファーストビュー -->
+
+    <!-- ===================== ① ヒーロー ===================== -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="inner hero__inner hero__inner--single" style="grid-template-columns:1fr">
-        <div class="hero__copy">
+      <div class="media">
+        <img src="../shared/img/stock/residential_solar.jpg" alt="太陽光パネルを載せた住宅が並ぶ街並み（イメージ）" fetchpriority="high">
+      </div>
+      <div class="hero__inner">
+        <div class="wrap">
           <p class="hero__label">太陽光・蓄電池の設置診断</p>
-          <h1 id="hero-title" class="hero__title"><span class="nobr">屋根に穴を開けない</span><span class="nobr">太陽光、出ています。</span></h1>
+          <h1 id="hero-title" class="hero__title"><span class="nobr">屋根に穴を開けない</span><span class="nobr">太陽光、</span><span class="nobr">出ています。</span></h1>
           <p class="hero__lead">
-            接着で設置する薄型パネルと、10月登場の新型蓄電池。<br>
+            接着で設置する薄型パネルと、新型の蓄電池。<br class="pc-only">
             もちろん国内メーカーも含めて、お住まいに合う組み合わせを中立にご提案します。
           </p>
-          <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_hero_cta_click"><span style="text-align:center">使える補助金もわかる。<span class="nobr">設置診断（無料）</span></span></a>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_hero_cta_click">使える補助金もわかる。<span class="nobr">設置診断（無料）</span></a>
+            <a class="btn btn--ghost-light" href="#news" data-track="lpb_new_hero_news_click">新製品を見る</a>
+          </div>
           <ul class="hero__trust">
             <li>東京都内全域に対応（八王子支店）</li>
             <li>補助金の申請は当社が代行</li>
             <li>診断後に営業電話はしません</li>
           </ul>
-          <p class="crosslink">設置から10年以上経った方は<a href="../b/" data-track="lpb_new_crosslink_click" data-track-label="to_replace">こちら（入替診断へ）</a></p>
+          <p class="crosslink crosslink--light">設置から10年以上経った方は<a href="../b/" data-track="lpb_new_crosslink_click" data-track-label="to_replace">こちら（入替診断へ）</a></p>
         </div>
       </div>
     </section>
 
-    <!-- S2 お悩み -->
-    <section class="section worries" aria-labelledby="worries-title">
-      <div class="inner">
+    <!-- ===================== ② お悩み ===================== -->
+    <section class="section signs" aria-labelledby="worries-title">
+      <div class="wrap">
         <h2 id="worries-title" class="section__title">こんなお悩みありませんか</h2>
-        <ul class="worry-list">
+        <ul class="sign-list sign-list--question">
           <li>電気代が上がり続けている</li>
           <li>屋根に穴を開けるのが不安</li>
           <li>パネルの重さが家に負担にならないか心配</li>
@@ -59,159 +79,239 @@
       </div>
     </section>
 
-    <!-- S3 最新情報 -->
-    <section class="section" id="news" aria-labelledby="news-title">
-      <div class="inner">
-        <h2 id="news-title" class="section__title">最新情報</h2>
-        <p class="section__lead">新しく登場した製品のご紹介です。どれか1つに決める必要はありません。ご提案は、この下の「人気順位TOP3」を含む取扱メーカーから行います。</p>
-        <div class="news-grid">
-          <article class="news-card">
-            <img class="media-fill" src="../shared/img/stock/solar_panel.jpg" alt="太陽光パネルのイメージ" width="960" height="540" loading="lazy">
-            <p class="img-caption">※イメージ写真です。製品写真はカタログ許諾後に差し替えます</p>
-            <h3>ヘスタソーラー｜屋根に穴を開けない太陽光</h3>
-            <p>従来の太陽光パネルは、重さや「屋根に穴を開ける」ことが導入の壁でした。ヘスタソーラーは接着で設置するため、家に穴を開けません。屋根のほか、壁やカーポートにも設置できます。</p>
-            <p class="tiny">※日本瓦・洋瓦の屋根には設置できません。その場合も壁・カーポートや他メーカーのパネルでご提案できます。<span class="ph-note">【注意事項は社長からの共有待ち】</span></p>
+    <!-- ===================== ③ 新製品 ===================== -->
+    <section class="section news" id="news" aria-labelledby="news-title">
+      <div class="wrap">
+        <h2 id="news-title" class="section__title">新しく登場した製品</h2>
+        <p class="section__lead">どれか1つに決める必要はありません。ご提案は、この下の「人気順位TOP3」を含む取扱メーカーから行います。</p>
+        <div class="news-list">
+          <article class="news-item">
+            <div class="media news-item__media">
+              <img src="../shared/img/products/hesta-flatroof.jpg" alt="陸屋根に貼り付けて設置したHESTAソーラー" loading="lazy">
+            </div>
+            <div class="news-item__body">
+              <p class="news-item__kicker">太陽光パネル</p>
+              <h3 class="news-item__title">HESTAソーラー<br><span>屋根に穴を開けない太陽光</span></h3>
+              <p>従来の太陽光パネルは、重さや「屋根に穴を開ける」ことが導入の壁でした。HESTAソーラーは接着で設置するため、家に穴を開けません。屋根のほか、壁やカーポートにも設置できます。</p>
+              <p class="news-item__note">※日本瓦・洋瓦の屋根には設置できません。その場合も壁・カーポートや他メーカーのパネルでご提案できます。<span class="ph-note">【注意事項は社長からの共有待ち】</span></p>
+            </div>
           </article>
-          <article class="news-card">
-            <img class="media-fill" src="../shared/img/stock/house_exterior.jpg" alt="住宅設備のイメージ" width="960" height="540" loading="lazy">
-            <p class="img-caption">※イメージ写真です。パワーウォール3の製品写真はカタログ許諾後に差し替えます</p>
-            <h3>パワーウォール3｜2026年10月登場の新型蓄電池</h3>
-            <p>2026年10月、テスラの新型蓄電池「パワーウォール3」が登場しました。<span class="ph-note">【主な仕様：カタログから記載】</span></p>
-            <p>国・東京都の補助金の対象機器です（SII登録済み）。</p>
+          <article class="news-item news-item--reverse">
+            <div class="media news-item__media">
+              <img src="../shared/img/products/tesla-powerwall3-2.jpg" alt="住宅の外壁に設置したテスラ Powerwall 3" loading="lazy">
+            </div>
+            <div class="news-item__body">
+              <p class="news-item__kicker">蓄電池</p>
+              <h3 class="news-item__title">テスラ Powerwall 3<br><span>日本で発売された新型蓄電池</span></h3>
+              <p>容量13.5kWh・定格出力9.69kW。パワコンを内蔵したオールインワン型で、停電時も家全体に電気を送れます。</p>
+              <p>国・東京都の補助金の対象機器です（SII登録済み）。</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- S4 人気順位TOP3（入替版と共通コンポーネント） -->
-    <section class="section" id="top3" aria-labelledby="top3-title">
-      <div class="inner">
-        <h2 id="top3-title" class="section__title">人気順位TOP3</h2>
-        <p class="section__lead">1社だけを勧めることはしません。屋根の形・ご家族の電気の使い方・ご予算に合わせて、国内外のメーカーから中立にご提案します。</p>
-        <div data-top3></div>
-        <p class="top3-more">このほかのメーカーもご相談いただけます。</p>
-        <div class="cta-block">
-          <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_top3_cta_click">設置診断を受ける（無料）</a>
+    <!-- ===================== ④ 人気順位TOP3（設備パネル＋カード） ===================== -->
+    <section id="top3" aria-labelledby="top3-title">
+      <div class="top3-intro">
+        <div class="wrap">
+          <h2 id="top3-title" class="section__title">人気順位TOP3</h2>
+          <p class="section__lead">1社だけを勧めることはしません。屋根の形・ご家族の電気の使い方・ご予算に合わせて、国内外のメーカーから中立にご提案します。</p>
+        </div>
+      </div>
+
+      <!-- 4-1 太陽光 -->
+      <article class="product" id="solar" aria-labelledby="solar-title">
+        <div class="media">
+          <img class="media__img--bottom" src="../shared/img/stock/solar_panel.jpg" alt="太陽光パネルのアップ（イメージ）" loading="lazy">
+        </div>
+        <div class="product__body">
+          <div class="wrap">
+            <p class="product__kicker">電気をつくる</p>
+            <h3 id="solar-title" class="product__title">太陽光発電</h3>
+            <p class="product__text">屋根の形や種類に合わせてパネルを選びます。瓦屋根の場合も、壁・カーポートや他メーカーのパネルでご提案できます。</p>
+            <ul class="stats">
+              <li><span class="stats__value stats__value--text">穴を開けない設置</span><span class="stats__label">接着で設置するパネルも選べます</span></li>
+              <li><span class="stats__value stats__value--text">壁・カーポートにも</span><span class="stats__label">屋根以外への設置もご相談ください</span></li>
+              <li><span class="stats__value stats__value--text">工事はほぼ1日</span><span class="stats__label">蓄電池との同時設置は最大2日程度</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <div class="top3-area">
+        <div class="wrap">
+          <h3 class="top3-area__title">太陽光パネル　人気順位TOP3</h3>
+          <div data-top3="solar" data-top3-heading="none"></div>
+        </div>
+      </div>
+
+      <!-- 4-2 蓄電池 -->
+      <article class="product product--right" id="battery" aria-labelledby="battery-title">
+        <div class="media">
+          <img src="../shared/img/stock/house_exterior.jpg" alt="戸建て住宅の外観（イメージ）" loading="lazy">
+        </div>
+        <div class="product__body">
+          <div class="wrap">
+            <p class="product__kicker">電気をためて、夜と停電に備える</p>
+            <h3 id="battery-title" class="product__title">蓄電池</h3>
+            <p class="product__text">昼につくった電気を夜に使えます。太陽光を設置済みの方は、蓄電池だけを後から追加することもできます。</p>
+            <ul class="stats">
+              <li><span class="stats__value stats__value--text">停電への備え</span><span class="stats__label">ためた電気を停電時に使えます</span></li>
+              <li><span class="stats__value stats__value--text">後から追加OK</span><span class="stats__label">太陽光を設置済みの方も対象</span></li>
+              <li><span class="stats__value stats__value--text">申請は当社が代行</span><span class="stats__label">国・東京都・区市町村の補助金</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <div class="top3-area">
+        <div class="wrap">
+          <h3 class="top3-area__title">蓄電池　人気順位TOP3</h3>
+          <div data-top3="battery" data-top3-heading="none"></div>
+          <p class="top3-note">※順位は当社の取扱実績に基づく人気順です（集計期間：【要確認】）。製品写真は東海エコライフ提供の画像です。</p>
+          <p class="top3-more">このほかのメーカーもご相談いただけます（太陽光8社・蓄電池8社）。</p>
+          <div class="cta-block">
+            <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_top3_cta_click">設置診断を受ける（無料）</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- S5 設置診断フォーム -->
+    <!-- ===================== ⑤ 設置診断（main.js がこのidを参照） ===================== -->
     <section class="section diagnose" id="diagnose" aria-labelledby="diagnose-title">
-      <div class="inner">
-        <h2 id="diagnose-title" class="section__title">設置診断（無料）</h2>
-        <p class="section__lead">お名前・電話番号は不要です。4つの質問にお答えください。</p>
-        <form id="diagnose-form" class="diagnose-form" novalidate>
-          <fieldset class="diagnose-form__field">
-            <legend>1. お住まいの区市町村は？</legend>
-            <select id="area" name="area" required>
-              <option value="">選択してください</option>
-              <optgroup label="23区">
-                <option>千代田区</option><option>中央区</option><option>港区</option>
-                <option>新宿区</option><option>文京区</option><option>台東区</option>
-                <option>墨田区</option><option>江東区</option><option>品川区</option>
-                <option>目黒区</option><option>大田区</option><option>世田谷区</option>
-                <option>渋谷区</option><option>中野区</option><option>杉並区</option>
-                <option>豊島区</option><option>北区</option><option>荒川区</option>
-                <option>板橋区</option><option>練馬区</option><option>足立区</option>
-                <option>葛飾区</option><option>江戸川区</option>
-              </optgroup>
-              <optgroup label="北多摩">
-                <option>立川市</option><option>武蔵野市</option><option>三鷹市</option>
-                <option>府中市</option><option>昭島市</option><option>調布市</option>
-                <option>小金井市</option><option>小平市</option><option>東村山市</option>
-                <option>国分寺市</option><option>国立市</option><option>狛江市</option>
-                <option>東大和市</option><option>清瀬市</option><option>東久留米市</option>
-                <option>武蔵村山市</option>
-              </optgroup>
-              <optgroup label="南多摩">
-                <option>八王子市</option><option>町田市</option><option>日野市</option>
-                <option>多摩市</option><option>稲城市</option>
-              </optgroup>
-              <optgroup label="西多摩">
-                <option>青梅市</option><option>福生市</option><option>羽村市</option>
-                <option>あきる野市</option><option>瑞穂町</option><option>日の出町</option>
-                <option>檜原村</option><option>奥多摩町</option>
-              </optgroup>
-              <optgroup label="島しょ">
-                <option>大島町</option><option>利島村</option><option>新島村</option>
-                <option>神津島村</option><option>三宅村</option><option>御蔵島村</option>
-                <option>八丈町</option><option>青ヶ島村</option><option>小笠原村</option>
-              </optgroup>
-              <option value="other">東京都以外</option>
-            </select>
-          </fieldset>
-          <fieldset class="diagnose-form__field">
-            <legend>2. いまの設備は？</legend>
-            <div class="choice-grid">
-              <label><input type="radio" name="equip" value="どちらもなし" required> どちらもなし</label>
-              <label><input type="radio" name="equip" value="太陽光のみあり"> 太陽光のみあり</label>
+      <div class="wrap diagnose__grid">
+        <div class="diagnose__intro">
+          <h2 id="diagnose-title" class="section__title">設置診断（無料）</h2>
+          <p class="section__lead">お名前・電話番号は不要です。4つの質問にお答えください。</p>
+          <ul class="diagnose__points">
+            <li>4つの質問に答えるだけ</li>
+            <li>使える補助金がわかる</li>
+            <li>屋根に合うパネルの目安がわかる</li>
+          </ul>
+        </div>
+
+        <div class="diagnose__panel">
+          <form id="diagnose-form" class="diagnose-form" novalidate>
+            <fieldset class="field">
+              <legend><label for="area">1. お住まいの区市町村は？</label></legend>
+              <select id="area" name="area" class="input" required>
+                <option value="">選択してください</option>
+                <optgroup label="23区">
+                  <option>千代田区</option><option>中央区</option><option>港区</option>
+                  <option>新宿区</option><option>文京区</option><option>台東区</option>
+                  <option>墨田区</option><option>江東区</option><option>品川区</option>
+                  <option>目黒区</option><option>大田区</option><option>世田谷区</option>
+                  <option>渋谷区</option><option>中野区</option><option>杉並区</option>
+                  <option>豊島区</option><option>北区</option><option>荒川区</option>
+                  <option>板橋区</option><option>練馬区</option><option>足立区</option>
+                  <option>葛飾区</option><option>江戸川区</option>
+                </optgroup>
+                <optgroup label="北多摩">
+                  <option>立川市</option><option>武蔵野市</option><option>三鷹市</option>
+                  <option>府中市</option><option>昭島市</option><option>調布市</option>
+                  <option>小金井市</option><option>小平市</option><option>東村山市</option>
+                  <option>国分寺市</option><option>国立市</option><option>狛江市</option>
+                  <option>東大和市</option><option>清瀬市</option><option>東久留米市</option>
+                  <option>武蔵村山市</option>
+                </optgroup>
+                <optgroup label="南多摩">
+                  <option>八王子市</option><option>町田市</option><option>日野市</option>
+                  <option>多摩市</option><option>稲城市</option>
+                </optgroup>
+                <optgroup label="西多摩">
+                  <option>青梅市</option><option>福生市</option><option>羽村市</option>
+                  <option>あきる野市</option><option>瑞穂町</option><option>日の出町</option>
+                  <option>檜原村</option><option>奥多摩町</option>
+                </optgroup>
+                <optgroup label="島しょ">
+                  <option>大島町</option><option>利島村</option><option>新島村</option>
+                  <option>神津島村</option><option>三宅村</option><option>御蔵島村</option>
+                  <option>八丈町</option><option>青ヶ島村</option><option>小笠原村</option>
+                </optgroup>
+                <option value="other">東京都以外</option>
+              </select>
+            </fieldset>
+            <fieldset class="field">
+              <legend>2. いまの設備は？</legend>
+              <div class="choice-grid">
+                <label><input type="radio" name="equip" value="どちらもなし" required>どちらもなし</label>
+                <label><input type="radio" name="equip" value="太陽光のみあり">太陽光のみあり</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>3. 屋根の種類は？</legend>
+              <div class="choice-grid">
+                <label><input type="radio" name="roof" value="瓦" required>瓦</label>
+                <label><input type="radio" name="roof" value="スレート">スレート</label>
+                <label><input type="radio" name="roof" value="金属">金属</label>
+                <label><input type="radio" name="roof" value="分からない">分からない</label>
+              </div>
+            </fieldset>
+            <fieldset class="field">
+              <legend>4. 毎月の電気代はおおよそ？</legend>
+              <div class="choice-grid">
+                <label><input type="radio" name="bill" value="〜1万円" required>〜1万円</label>
+                <label><input type="radio" name="bill" value="1〜2万円">1〜2万円</label>
+                <label><input type="radio" name="bill" value="2〜3万円">2〜3万円</label>
+                <label><input type="radio" name="bill" value="3万円以上">3万円以上</label>
+              </div>
+            </fieldset>
+            <p id="form-error" class="form-error" role="alert" hidden></p>
+            <button type="submit" class="btn btn--primary btn--block">診断結果を見る</button>
+          </form>
+
+          <div id="diagnose-result" class="diagnose-result" hidden>
+            <div id="result-out" hidden>
+              <h3>申し訳ございません</h3>
+              <p>現在は東京都内のご相談を受けております。神奈川・埼玉は、将来広げる予定です。</p>
             </div>
-          </fieldset>
-          <fieldset class="diagnose-form__field">
-            <legend>3. 屋根の種類は？</legend>
-            <div class="choice-grid">
-              <label><input type="radio" name="roof" value="瓦" required> 瓦</label>
-              <label><input type="radio" name="roof" value="スレート"> スレート</label>
-              <label><input type="radio" name="roof" value="金属"> 金属</label>
-              <label><input type="radio" name="roof" value="分からない"> 分からない</label>
-            </div>
-          </fieldset>
-          <fieldset class="diagnose-form__field">
-            <legend>4. 毎月の電気代はおおよそ？</legend>
-            <div class="choice-grid">
-              <label><input type="radio" name="bill" value="〜1万円" required> 〜1万円</label>
-              <label><input type="radio" name="bill" value="1〜2万円"> 1〜2万円</label>
-              <label><input type="radio" name="bill" value="2〜3万円"> 2〜3万円</label>
-              <label><input type="radio" name="bill" value="3万円以上"> 3万円以上</label>
-            </div>
-          </fieldset>
-          <p id="form-error" class="form-error" hidden></p>
-          <button type="submit" class="btn btn--primary btn--block">診断結果を見る</button>
-        </form>
-        <div id="diagnose-result" class="diagnose-result" hidden>
-          <div id="result-out" hidden>
-            <h3>申し訳ございません</h3>
-            <p>現在は東京都内のご相談を受けております。神奈川・埼玉は、将来広げる予定です。</p>
-          </div>
-          <div id="result-ok" hidden>
-            <h3 id="result-heading"></h3>
-            <p id="result-equip"></p>
-            <p id="result-roof"></p>
-            <p id="result-subsidy"></p>
-            <p>正確な補助金額と、お住まいに合う組み合わせ（TOP3を含む取扱メーカーから中立に比較）をLINEでお届けします。</p>
-            <div class="result-cta">
-              <a class="btn btn--line" href="https://line.me/" target="_blank" rel="noopener" data-track="lpb_new_line_click">LINEで詳しい診断を受け取る</a>
-              <p class="tiny">当日〜翌日にご返信します（20時頃までのお問い合わせは、当日中にご返信できることがほとんどです）。営業電話はいたしません。</p>
-              <p class="result-alt">LINEをお使いでない方：<a href="#contact-form">フォームで受け取る</a> ／ お電話 <a href="tel:0426529777">042-652-9777</a>（9:00〜18:00、土日祝も受付）</p>
+            <div id="result-ok" hidden>
+              <h3 id="result-heading"></h3>
+              <p id="result-equip"></p>
+              <p id="result-roof"></p>
+              <p id="result-subsidy"></p>
+              <p>正確な補助金額と、お住まいに合う組み合わせ（人気順位TOP3を含む取扱メーカーから中立に比較）をLINEでお届けします。</p>
+              <div class="result-cta">
+                <a class="btn btn--line btn--block" href="https://line.me/" target="_blank" rel="noopener" data-track="lpb_new_line_click">LINEで詳しい診断を受け取る</a>
+                <p class="tiny">当日〜翌日にご返信します（20時頃までのお問い合わせは、当日中にご返信できることがほとんどです）。営業電話はいたしません。</p>
+                <p class="result-alt">LINEをお使いでない方：<a href="#contact-form">フォームで受け取る</a> ／ お電話 <a href="tel:0426529777">042-652-9777</a>（9:00〜18:00、土日祝も受付）</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- S6 使える補助金 -->
-    <section class="section" id="subsidy" aria-labelledby="subsidy-title">
-      <div class="inner">
-        <h2 id="subsidy-title" class="section__title">使える補助金</h2>
-        <p class="section__lead">太陽光・蓄電池は、国・東京都・お住まいの市区町村の制度を組み合わせて申請できる場合があります。当社は登録事業者として、どの制度が対象になるかの診断から申請まで、すべて代行します。</p>
-        <div class="table-wrap">
-          <table class="data-table">
-            <thead><tr><th>制度</th><th>対象設備</th></tr></thead>
-            <tbody>
-              <tr><td>資源エネルギー庁 令和7年度補正 DR家庭用蓄電池事業</td><td>蓄電池</td></tr>
-              <tr><td>東京都 クールネット東京</td><td>太陽光・蓄電池</td></tr>
-              <tr><td>お住まいの市区町村</td><td>自治体により異なります（個別にお調べします）</td></tr>
-            </tbody>
-          </table>
+    <!-- ===================== ⑥ 使える補助金 ===================== -->
+    <section class="section subsidy" id="subsidy" aria-labelledby="subsidy-title">
+      <div class="wrap">
+        <div class="subsidy__box">
+          <h2 id="subsidy-title" class="section__title">使える補助金</h2>
+          <p class="section__lead">太陽光・蓄電池は、国・東京都・お住まいの区市町村の制度を組み合わせて申請できる場合があります。当社は登録事業者として、どの制度が対象になるかの診断から申請まで、すべて代行します。</p>
+          <div class="subsidy__rows subsidy__rows--3">
+            <div class="subsidy__row is-ok">
+              <p class="subsidy__term">国</p>
+              <p>資源エネルギー庁 令和7年度補正 DR家庭用蓄電池事業</p>
+              <p class="subsidy__target">対象：蓄電池</p>
+            </div>
+            <div class="subsidy__row is-ok">
+              <p class="subsidy__term">東京都</p>
+              <p>クールネット東京</p>
+              <p class="subsidy__target">対象：太陽光・蓄電池</p>
+            </div>
+            <div class="subsidy__row">
+              <p class="subsidy__term">区市町村</p>
+              <p>お住まいの自治体の制度</p>
+              <p class="subsidy__target">対象：自治体により異なります（個別にお調べします）</p>
+            </div>
+          </div>
+          <p class="section__note">※補助金額は設備の種類・容量、お住まいの自治体、申請時期、予算の残額により異なります。同額の交付を保証するものではありません。</p>
         </div>
-        <p class="section__note">※補助金額は設備の種類・容量、お住まいの自治体、申請時期、予算の残額により異なります。同額の交付を保証するものではありません。</p>
       </div>
     </section>
 
-    <!-- S7 施工事例 -->
-    <section class="section" id="cases" aria-labelledby="cases-title">
-      <div class="inner">
+    <!-- ===================== ⑦ 施工事例 ===================== -->
+    <section class="section cases" id="cases" aria-labelledby="cases-title">
+      <div class="wrap">
         <h2 id="cases-title" class="section__title">施工事例</h2>
         <p class="section__lead">提携施工会社による新規設置の事例です（公開中の事例のみ）。</p>
         <div class="case-grid">
@@ -220,75 +320,77 @@
               <img class="case-card__img" src="../shared/img/cases/b1.jpg" alt="八王子市 K様邸の施工写真" loading="lazy" width="1477" height="1108">
             </div>
             <p class="case-card__area">八王子市</p>
-            <p>メーカー：カナディアン・ソーラー</p>
-            <p>太陽光＋蓄電池・創蓄連携</p>
+            <h3 class="case-card__title">太陽光＋蓄電池・創蓄連携</h3>
+            <ul class="case-card__equip"><li>カナディアン・ソーラー</li></ul>
           </article>
           <article class="case-card">
             <div class="case-card__media">
-              <img class="case-card__img" src="../shared/img/cases/b2.jpg" alt="小平市 Y様邸の施工写真" loading="lazy" width="800" height="600">
+              <img class="case-card__img" src="../shared/img/cases/b2.jpg" alt="小平市 Y様邸の施工写真" loading="lazy" width="1300" height="976">
             </div>
             <p class="case-card__area">小平市</p>
-            <p>メーカー：ネクストエナジー</p>
-            <p>太陽光＋蓄電池・創蓄連携</p>
+            <h3 class="case-card__title">太陽光＋蓄電池・創蓄連携</h3>
+            <ul class="case-card__equip"><li>ネクストエナジー</li></ul>
           </article>
           <article class="case-card">
             <div class="case-card__media">
-              <img class="case-card__img" src="../shared/img/cases/b3.jpg" alt="青梅市 M様邸の施工写真" loading="lazy" width="800" height="600">
+              <img class="case-card__img" src="../shared/img/cases/b3.jpg" alt="青梅市 M様邸の施工写真" loading="lazy" width="961" height="1280">
             </div>
             <p class="case-card__area">青梅市</p>
-            <p>メーカー：DMM.com</p>
-            <p>蓄電池</p>
+            <h3 class="case-card__title">蓄電池</h3>
+            <ul class="case-card__equip"><li>DMM.com</li></ul>
           </article>
         </div>
         <p class="section__note">費用や補助金額など、詳しくはお気軽にお問い合わせください。ここに掲載しきれない過去の事例もございます。写真は公式HPの公開事例（実写）です。AI生成画像は使いません。</p>
-        <p class="img-credit">最新情報の写真はフリー素材のイメージです。TOP3は東海エコライフ提供の製品画像です。施工写真：自社HP施工事例より</p>
+        <p class="img-credit">新製品・人気順位TOP3の写真：東海エコライフ提供の製品画像。施工写真：自社HP施工事例より</p>
       </div>
     </section>
 
-    <!-- S8 おうち丸ごと -->
-    <section class="section" id="whole-house" aria-labelledby="whole-title">
-      <div class="inner">
-        <h2 id="whole-title" class="section__title">おうち丸ごとで考える</h2>
-        <p class="section__lead">電気をつくって貯めるだけでなく、熱を逃がさない・お湯を効率よく沸かすことでも、光熱費は変わります。東京都（クールネット東京）では、窓・玄関やエコキュートも補助の対象です。まとめてご相談いただくと、使える制度をあわせてお調べします。</p>
-        <div class="link-card-grid">
-          <a class="link-card" href="../c/" data-track="lpb_new_wholehouse_click" data-track-label="to_window">
-            <strong>窓・玄関の断熱リフォーム</strong>
-            <span>結露・底冷え・暑さに。1窓から、最短1時間</span>
+    <!-- ===================== ⑧ おうち丸ごと ===================== -->
+    <section class="section whole" id="whole-house" aria-labelledby="whole-title">
+      <div class="wrap whole__grid">
+        <div>
+          <h2 id="whole-title" class="section__title">おうち丸ごとで考える</h2>
+          <p class="section__lead">電気をつくって貯めるだけでなく、熱を逃がさない・お湯を効率よく沸かすことでも、光熱費は変わります。東京都（クールネット東京）では、窓・玄関やエコキュートも補助の対象です。まとめてご相談いただくと、使える制度をあわせてお調べします。</p>
+        </div>
+        <div class="whole__links">
+          <a class="whole-link" href="../c/" data-track="lpb_new_wholehouse_click" data-track-label="to_window">
+            <span class="whole-link__title">窓・玄関の断熱リフォーム</span>
+            <span class="whole-link__text">結露・底冷え・暑さに。1窓から、最短1時間</span>
           </a>
-          <a class="link-card" href="../d/" data-track="lpb_new_wholehouse_click" data-track-label="to_ecocute">
-            <strong>エコキュート交換</strong>
-            <span>給湯を電気で。工事費・処分費込み 55万円〜（戸建てのみ）</span>
+          <a class="whole-link" href="../d/" data-track="lpb_new_wholehouse_click" data-track-label="to_ecocute">
+            <span class="whole-link__title">エコキュート交換</span>
+            <span class="whole-link__text">給湯を電気で。工事費・処分費込み 55万円〜（戸建てのみ）</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- S9 流れ -->
+    <!-- ===================== ⑨ ご相談から工事までの流れ ===================== -->
     <section class="section flow" id="flow" aria-labelledby="flow-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="flow-title" class="section__title">ご相談から工事までの流れ</h2>
         <ol class="flow-list">
-          <li><span>1</span><div><strong>無料の設置診断（Web）</strong><p>4つの質問に答えるだけ</p></div></li>
-          <li><span>2</span><div><strong>LINEで詳細をお届け</strong><p>当日〜翌日（20時頃まではほとんど当日中）</p></div></li>
-          <li class="flow-list__pause"><span>—</span><div><p>ここで終了されても構いません</p></div></li>
-          <li><span>3</span><div><strong>現地調査</strong><p>提携施工会社と当社が同行／ご希望の日程</p></div></li>
-          <li><span>4</span><div><strong>お見積</strong><p>TOP3を含む取扱メーカーから、お住まいに合う組み合わせをご提案</p></div></li>
-          <li><span>5</span><div><strong>ご契約・補助金申請</strong><p>当社がすべて代行（申請時期は制度により着工前・設置後など）</p></div></li>
-          <li><span>6</span><div><strong>工事</strong><p>提携施工会社が実施／ほぼ1日（太陽光と蓄電池の同時設置は最大2日程度）</p></div></li>
-          <li><span>7</span><div><strong>アフターフォロー</strong><p>導入後もご相談いただけます</p></div></li>
+          <li><h3>無料の設置診断（Web）</h3><p>4つの質問に答えるだけ</p></li>
+          <li><h3>LINEで詳細をお届け</h3><p>当日〜翌日（20時頃まではほとんど当日中）</p></li>
+          <li class="flow-list__pause"><p>ここで終了されても構いません</p></li>
+          <li><h3>現地調査</h3><p>提携施工会社と当社が同行／ご希望の日程</p></li>
+          <li><h3>お見積</h3><p>人気順位TOP3を含む取扱メーカーから、お住まいに合う組み合わせをご提案</p></li>
+          <li><h3>ご契約・補助金申請</h3><p>当社がすべて代行（申請時期は制度により着工前・設置後など）</p></li>
+          <li><h3>工事</h3><p>提携施工会社が実施／ほぼ1日（太陽光と蓄電池の同時設置は最大2日程度）</p></li>
+          <li><h3>アフターフォロー</h3><p>導入後もご相談いただけます</p></li>
         </ol>
         <p class="section__note">工事は、当社が品質を確認した提携施工会社が担当します。補助金の申請とメーカー選定は当社が一括で行います。</p>
       </div>
     </section>
 
-    <!-- S9 よくあるご質問 -->
+    <!-- ===================== ⑩ よくあるご質問 ===================== -->
     <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="faq-title" class="section__title">よくあるご質問</h2>
         <div class="faq-list">
           <details><summary>診断を受けたら営業の電話が来ますか</summary><p>診断後に営業電話はしません。ご連絡はLINE（またはお客様が選んだ連絡方法）で行い、訪問はご希望の場合のみです。</p></details>
-          <details><summary>瓦屋根でも設置できますか</summary><p>ヘスタソーラーは瓦屋根（日本瓦・洋瓦）には設置できません。壁やカーポートへの設置、または他メーカーのパネルでご提案します。</p></details>
-          <details><summary>テスラ以外も選べますか</summary><p>選べます。TOP3を含む取扱メーカーから、お住まいに合わせて中立にご提案します。</p></details>
+          <details><summary>瓦屋根でも設置できますか</summary><p>HESTAソーラーは瓦屋根（日本瓦・洋瓦）には設置できません。壁やカーポートへの設置、または他メーカーのパネルでご提案します。</p></details>
+          <details><summary>テスラ以外も選べますか</summary><p>選べます。人気順位TOP3を含む取扱メーカーから、お住まいに合わせて中立にご提案します。</p></details>
           <details><summary>蓄電池だけ後から追加できますか</summary><p>できます。太陽光を設置済みの方も対象です。</p></details>
           <details><summary>補助金の申請は自分でやるのですか</summary><p>すべて当社が代行します。国・東京都・市区町村のどの制度も対応します。</p></details>
           <details><summary>工事はどこがやるのですか</summary><p>当社が品質を確認した提携施工会社が施工します。補助金申請とメーカー選定は当社が担当します。</p></details>
@@ -297,9 +399,9 @@
       </div>
     </section>
 
-    <!-- S10 会社情報 -->
+    <!-- ===================== ⑪ 会社情報 ===================== -->
     <section class="section company" id="company" aria-labelledby="company-title">
-      <div class="inner">
+      <div class="wrap company__grid">
         <h2 id="company-title" class="section__title">会社情報</h2>
         <dl class="company-list">
           <div><dt>会社名</dt><dd>東海エコライフ（八王子支店）</dd></div>
@@ -312,39 +414,63 @@
       </div>
     </section>
 
-    <!-- S10 最終CTA -->
+    <!-- ===================== ⑫ 最終CTA・フォーム ===================== -->
     <section class="section final-cta" id="final" aria-labelledby="final-title">
-      <div class="inner">
-        <h2 id="final-title" class="section__title">まずは、お住まいに合う組み合わせを調べることから。</h2>
-        <p class="section__lead">4つの質問にお答えいただくだけで、使える補助金と、合いそうな組み合わせをお調べします。<br>メーカーを決めるのは、そのあとで構いません。</p>
-        <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_final_cta_click">設置診断を受ける（無料）</a>
-        <p class="crosslink">設置から10年以上経った方は<a href="../b/" data-track="lpb_new_crosslink_click" data-track-label="to_replace_final">入替診断へ</a></p>
-        <ul class="hero__trust hero__trust--center">
-          <li>相談だけでもOK</li>
-          <li>営業電話はしません</li>
-          <li>訪問はご希望の場合のみ</li>
-        </ul>
-        <p class="final-phone">お電話：<a href="tel:0426529777">042-652-9777</a>（9:00〜18:00、土日祝も受付）</p>
+      <div class="wrap final-cta__grid">
+        <div>
+          <h2 id="final-title" class="section__title">まずは、お住まいに合う<br class="pc-only">組み合わせを調べることから。</h2>
+          <p class="section__lead">4つの質問にお答えいただくだけで、使える補助金と、合いそうな組み合わせをお調べします。メーカーを決めるのは、そのあとで構いません。</p>
+          <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_final_cta_click">設置診断を受ける（無料）</a>
+          <ul class="hero__trust">
+            <li>相談だけでもOK</li>
+            <li>営業電話はしません</li>
+            <li>訪問はご希望の場合のみ</li>
+          </ul>
+          <a class="channel" href="tel:0426529777">
+            <span class="channel__label">お電話でのご相談</span>
+            <span class="channel__value num">042-652-9777</span>
+            <span class="channel__note">9:00〜18:00、土日祝も受付</span>
+          </a>
+          <p class="crosslink crosslink--light">設置から10年以上経った方は<a href="../b/" data-track="lpb_new_crosslink_click" data-track-label="to_replace_final">入替診断へ</a></p>
+        </div>
+
         <div class="contact-form-box" id="contact-form">
           <h3>フォームで受け取る（仮）</h3>
           <p class="tiny">本番接続前のUI確認用です。送信はしません。</p>
           <form id="contact-dummy" class="contact-dummy">
-            <label>お名前 <input type="text" name="name"></label>
-            <label>メールまたは電話 <input type="text" name="contact"></label>
-            <label>ご相談内容 <textarea name="message" rows="3"></textarea></label>
+            <div class="field">
+              <label for="c-name">お名前</label>
+              <input id="c-name" class="input" type="text" name="name" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="c-contact">メールまたは電話</label>
+              <input id="c-contact" class="input" type="text" name="contact">
+            </div>
+            <div class="field">
+              <label for="c-message">ご相談内容</label>
+              <textarea id="c-message" class="input" name="message" rows="4"></textarea>
+            </div>
             <button type="submit" class="btn btn--secondary">送信（デモ）</button>
-            <p id="contact-msg" class="tiny" hidden></p>
+            <p id="contact-msg" class="tiny" role="status" hidden></p>
           </form>
         </div>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
-    <div class="inner"><p>© 東海エコライフ　LP-B 新規設置版 プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p></div>
+    <div class="wrap"><p>© 東海エコライフ　LP-B 新規設置版 プレビュー　｜　<a href="../">一覧へ</a></p></div>
   </footer>
-  <a class="sticky-cta" href="#diagnose" data-track="lpb_new_sticky_cta_click">設置診断を受ける</a>
+
+  <!-- スマホ固定CTA（main.js が診断セクション表示中に .is-hidden を付ける） -->
+  <div class="sticky-cta">
+    <a class="btn btn--ghost-dark" href="tel:0426529777">電話で相談</a>
+    <a class="btn btn--primary" href="#diagnose" data-track="lpb_new_sticky_cta_click">設置診断を受ける</a>
+  </div>
+
   <script src="../shared/track.js"></script>
   <script src="../shared/top3.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/ui.js"></script>
 </body>
 </html>
