@@ -105,6 +105,8 @@ ul, ol { margin: 0; padding: 0; }
 /* ---------- 画像枠 ---------- */
 .media { position: relative; background: var(--ink-soft); overflow: hidden; }
 .media img { width: 100%; height: 100%; object-fit: cover; }
+/* 被写体が画像の下側にある写真用（太陽光パネルの背景など） */
+.media img.media__img--bottom { object-position: center bottom; }
 
 /* =========================================================
    プレビューバナー・ヘッダー

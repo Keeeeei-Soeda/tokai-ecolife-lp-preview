@@ -20,6 +20,7 @@ Unsplash（商用利用可・クレジット任意だが明記）。製品固有
 | `modern_window.jpg` | LP-C／ヒーロー補完 | photo-1600585154340-be6161a56a0c |
 | `outdoor_unit.jpg` | トップ3 蓄電池イメージ | photo-1621905252507-b35492cc74b4 |
 | `house_exterior.jpg` | ヒーロー／トップ3 | photo-1570129477492-45c003edd2be |
+| `residential_solar.jpg` | LP-B 蓄電池パネルの背景（太陽光付き住宅街） | 東海エコライフより受領（2026-10-30）・出典【要確認】 |
 
 ## 製品写真（`products/`）
 
