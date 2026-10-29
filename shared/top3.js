@@ -34,9 +34,10 @@ window.TOP3_MAKERS = {
         subsidy: null,
         url: "https://hestasolar.com/",
         // 製品カタログ写真は許諾前のため、フリー素材のイメージ写真を仮置き
-        image: "../shared/img/stock/solar_panel.jpg",
-        imageLabel: "太陽光パネルのイメージ",
-        imageIsStock: true,
+        // 製品写真：東海エコライフより受領（2026-10-30）
+        image: "../shared/img/products/hesta-roof.jpg",
+        imageFit: "cover",
+        imageLabel: "HESTAソーラーの設置例",
       },
       {
         maker: "カナディアンソーラー",
@@ -48,9 +49,10 @@ window.TOP3_MAKERS = {
         forWho: "【カタログから記載】",
         subsidy: null,
         url: "https://csisolar.co.jp/tax_products/module/",
-        image: "../shared/img/stock/solar_roof.jpg",
-        imageLabel: "太陽光パネルのイメージ",
-        imageIsStock: true,
+        // 製品写真：東海エコライフより受領（2026-10-30）。CS6.2-48TM-465 のモジュール画像
+        image: "../shared/img/products/canadian-tophiku6-465w.jpg",
+        imageFit: "contain",
+        imageLabel: "TOPHiKu6 モジュール",
       },
       {
         maker: "パナソニック",
