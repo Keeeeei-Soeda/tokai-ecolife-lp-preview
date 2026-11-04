@@ -133,6 +133,13 @@ body {
   line-height: 1.35;
   letter-spacing: 0.02em;
   color: #fff;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: normal;
+}
+
+.nobr {
+  display: inline-block;
 }
 
 .hero__lead,
@@ -170,6 +177,9 @@ body {
   text-align: left;
   font-weight: 900;
   letter-spacing: 0.02em;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: normal;
 }
 
 .section__lead {

@@ -152,6 +152,9 @@ a:hover {
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: 0.02em;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: normal;
 }
 
 .hero__lead {

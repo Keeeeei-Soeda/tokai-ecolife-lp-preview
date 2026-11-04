@@ -753,3 +753,13 @@ textarea.input { min-height: 120px; resize: vertical; }
 .sticky-cta.is-hidden { transform: translateY(110%); opacity: 0; pointer-events: none; }
 @media (max-width: 900px) { .sticky-cta { display: flex; } }
 @media (min-width: 901px) { .site-footer { padding-bottom: 32px; } }
+
+
+/* line-break guard */
+.hero__title,
+.section__title {
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: normal;
+}
+.nobr { display: inline-block; }
