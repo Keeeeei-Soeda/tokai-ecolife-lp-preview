@@ -7,51 +7,36 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --green:#008b4c; --ink:#1c1c1c; --muted:#5a5a5a; --bg:#f4f7f4; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:"Noto Sans JP",sans-serif; color:var(--ink); background:linear-gradient(160deg,#f7fbf7,#e7f3ea); min-height:100vh; }
-    .wrap { width:min(720px, calc(100% - 32px)); margin:48px auto; }
-    .banner { background:#1c1c1c; color:#fff; text-align:center; padding:10px; font-size:12px; }
-    h1 { font-family:"Shippori Mincho",serif; font-size:1.6rem; margin:0 0 8px; }
+    :root { --ink:#17212b; --muted:#5b6670; --sun:#f2a900; --paper:#f4f6f5; --line:#d9dfdd; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Zen Kaku Gothic New",sans-serif; color:var(--ink); background:var(--paper); }
+    .banner { background:var(--ink); color:#fff; text-align:center; padding:10px; font-size:12px; letter-spacing:.06em; }
+    .wrap { width:min(820px, calc(100% - 40px)); margin:48px auto 80px; }
+    h1 { margin:0 0 8px; font-size:clamp(1.6rem,4vw,2.2rem); font-weight:900; letter-spacing:.04em; }
+    .brand { margin:0 0 10px; font-weight:900; letter-spacing:.1em; }
     .lead { color:var(--muted); margin:0 0 28px; }
-    .cards { display:grid; gap:14px; }
-    a.card { display:block; padding:22px 20px; background:#fff; border-radius:14px; text-decoration:none; color:inherit; box-shadow:0 10px 30px rgba(0,80,40,.08); border:1px solid #d9e5dd; transition:.2s; }
-    a.card:hover { transform:translateY(-2px); border-color:var(--green); }
-    .card strong { display:block; color:var(--green); font-size:1.15rem; margin-bottom:6px; }
-    .card span { color:var(--muted); font-size:.92rem; }
-    .note { margin-top:24px; font-size:.8rem; color:var(--muted); }
+    a.item { display:block; padding:20px 0; border-bottom:1px solid var(--line); color:inherit; text-decoration:none; }
+    a.item:hover { color:#2e6b73; }
+    a.item strong { display:block; font-size:1.15rem; margin-bottom:4px; }
+    a.item span { color:var(--muted); font-size:.92rem; }
+    .note { margin-top:28px; font-size:.85rem; color:var(--muted); }
+    .note a { color:#2e6b73; font-weight:700; }
   </style>
 </head>
 <body>
   <div class="banner">仮ページ一覧／本番未公開・検索非表示</div>
   <div class="wrap">
-    <h1>東海エコライフ　LPプレビュー</h1>
-    <p class="lead">先方確認用の仮ページです。内容は構成案に基づく試作で、本番サイトには未反映です。</p>
-    <div class="cards">
-      <a class="card" href="./a/">
-        <strong>LP-A｜お家まるごと省エネ診断</strong>
-        <span>補助金の無料診断（60秒）／東京都内全域</span>
-      </a>
-      <a class="card" href="./b/">
-        <strong>LP-B（入替版）｜蓄電池・太陽光の入替診断</strong>
-        <span>設置から10年以上の方向け／他社設置も相談可</span>
-      </a>
-      <a class="card" href="./b-new/">
-        <strong>LP-B（新規設置版）｜太陽光・蓄電池の設置診断</strong>
-        <span>屋根に穴を開けない太陽光・新型蓄電池／人気順位TOP3</span>
-      </a>
-      <a class="card" href="./c/">
-        <strong>LP-C｜マドリノベ（窓・玄関）</strong>
-        <span>結露・カビ・防犯にも／1窓から最短1時間／先進的窓リノベ2026</span>
-      </a>
-      <a class="card" href="./d/">
-        <strong>LP-D｜エコキュート交換</strong>
-        <span>工事費・処分費込み 55万円〜／電話優先／戸建てのみ</span>
-      </a>
-    </div>
-    <p class="note">※ 本番サイトには未反映です。施工写真は自社HP公開事例、イメージ写真はフリー素材（Unsplash）です。メーカー公式カタログ写真・ロゴは許諾後に差し替え予定。窓・玄関（C）の施工事例写真は実績準備後に追加します。</p>
+    <p class="brand">東海エコライフ</p>
+    <h1>LPプレビュー</h1>
+    <p class="lead">LP-B系の刷新デザインを基調に、文言修正（東京支店など）を反映した確認用ページです。</p>
+    <a class="item" href="./a/"><strong>LP-A｜お家まるごと省エネ診断</strong><span>補助金の無料診断／東京都内全域</span></a>
+    <a class="item" href="./b/"><strong>LP-B（入替）｜蓄電池・太陽光の入替診断</strong><span>設置から10年以上の方向け</span></a>
+    <a class="item" href="./b-new/"><strong>LP-B（新規）｜太陽光・蓄電池の設置診断</strong><span>穴を開けない太陽光・人気順位TOP3</span></a>
+    <a class="item" href="./c/"><strong>LP-C｜マドリノベ（窓・玄関）</strong><span>結露・防犯／先進的窓リノベ2026</span></a>
+    <a class="item" href="./d/"><strong>LP-D｜エコキュート交換</strong><span>工事費・処分費込み 55万円〜</span></a>
+    <p class="note">刷新前の旧デザインは <a href="./v1/">v1/</a> に残しています。</p>
   </div>
 </body>
 </html>

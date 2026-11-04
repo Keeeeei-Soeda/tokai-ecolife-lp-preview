@@ -1,0 +1,243 @@
+/*
+ * A / C / D を LP-B 刷新トーンへ寄せる共通上書き
+ * （b / b-new は専用 style.css が本体。こちらは主に旧緑系ページ向け）
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Manrope:wght@500;700;800&display=swap");
+
+:root {
+  --ink: #17212b;
+  --ink-soft: #2a3743;
+  --paper: #f4f6f5;
+  --white: #fff;
+  --sun: #f2a900;
+  --sun-deep: #c98a00;
+  --glass: #2e6b73;
+  --line: #d9dfdd;
+  --muted: #5b6670;
+  --green: var(--glass);
+  --green-dark: #24555c;
+  --lime: #f2a900;
+  --bg: var(--paper);
+  --bg-deep: #e6eeee;
+  --radius: 14px;
+  --shadow: none;
+  --font: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  --display: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+  --header: 64px;
+  --preview: 30px;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.preview-banner {
+  background: var(--ink);
+  letter-spacing: 0.06em;
+}
+
+.site-header {
+  background: rgba(244, 246, 245, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__brand {
+  font-family: var(--display);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  min-height: min(88vh, 820px);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  padding: 0 !important;
+  color: #fff;
+  background: var(--ink);
+}
+
+.hero__bg {
+  display: none !important;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.04);
+  animation: unify-drift 16s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(23, 33, 43, 0.78) 0%, rgba(23, 33, 43, 0.35) 55%, rgba(23, 33, 43, 0.2) 100%),
+    linear-gradient(180deg, rgba(23, 33, 43, 0.2) 0%, rgba(23, 33, 43, 0.78) 100%);
+}
+
+.hero__inner,
+.hero__stage {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 0 0 clamp(48px, 8vh, 88px);
+  display: block;
+}
+
+.hero__copy {
+  max-width: 34em;
+}
+
+.hero__visual,
+.hero-photo,
+.character-card {
+  display: none !important;
+}
+
+.hero__label {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hero__brand {
+  margin: 0 0 14px;
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
+.hero__title {
+  margin: 0 0 16px;
+  font-size: clamp(1.8rem, 4.8vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.hero__lead,
+.hero__text {
+  margin: 0 0 26px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero__trust {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hero__trust li::before {
+  color: var(--sun);
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.btn--primary {
+  background: var(--sun);
+  color: #1a1408;
+  box-shadow: none;
+}
+
+.btn--primary:hover {
+  background: var(--sun-deep);
+  color: #1a1408;
+}
+
+.section__title {
+  text-align: left;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.section__lead {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section:nth-of-type(even) {
+  background: #eef3f2;
+}
+
+.final-cta {
+  background: linear-gradient(135deg, #17212b, #2e6b73);
+  color: #fff;
+}
+
+.final-cta .section__title,
+.final-cta .section__lead,
+.final-cta a {
+  color: #fff;
+}
+
+.final-cta .btn--primary {
+  background: var(--sun);
+  color: #1a1408;
+}
+
+.sticky-cta {
+  background: var(--sun);
+  color: #1a1408;
+  border-radius: 999px;
+}
+
+.sticky-cta:hover {
+  background: var(--sun-deep);
+  color: #1a1408;
+}
+
+.site-footer {
+  background: var(--ink);
+}
+
+.news-card,
+.top3-card,
+.case-card,
+.link-card {
+  box-shadow: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+@keyframes unify-drift {
+  from { transform: scale(1.04) translate3d(0, 0, 0); }
+  to { transform: scale(1.1) translate3d(-1%, -0.8%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before { animation: none; }
+}
+
+body.lp-a .hero { --hero-image: url("./img/stock/house_exterior.jpg"); }
+body.lp-c .hero { --hero-image: url("./img/stock/modern_window.jpg"); }
+body.lp-d .hero { --hero-image: url("./img/stock/outdoor_unit.jpg"); }
+
+/* fallback if body class missing */
+body:not(.lp-b):not(.lp-b-new) .hero {
+  --hero-image: url("./img/stock/house_exterior.jpg");
+}
+body.lp-a .hero { --hero-image: url("./img/stock/house_exterior.jpg"); }
+body.lp-c .hero { --hero-image: url("./img/stock/modern_window.jpg"); }
+body.lp-d .hero { --hero-image: url("./img/stock/outdoor_unit.jpg"); }

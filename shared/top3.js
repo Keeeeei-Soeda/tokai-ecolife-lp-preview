@@ -28,7 +28,7 @@ window.TOP3_MAKERS = {
         product: "HESTAソーラー（1枚440W）",
         badge: "NEW",
         // 出典：https://hestasolar.com/
-        feature: "貼り付けて設置する方式で、基本的に屋根へ穴を開けません。出力保証25年。※瓦屋根不可",
+        feature: "貼り付けて設置する方式で、基本的に屋根へ穴を開けません。メーカー製品保証12年／施工保証20年／出力保証25年。※瓦屋根不可",
         specs: [],
         forWho: "【カタログから記載】",
         subsidy: null,

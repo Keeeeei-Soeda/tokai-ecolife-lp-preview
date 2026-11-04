@@ -1,31 +1,15 @@
-# 東海エコライフ LPプレビュー
+# 東海エコライフ LP プレビュー
 
-先方確認用の仮ランディングページです。本番未反映・検索非表示想定。
+仮公開用ランディングページ（本番未反映・noindex）。
 
-| LP | 内容 | URL |
-|---|---|---|
-| A | お家まるごと省エネ診断 | `/a/` |
-| B（入替版） | 蓄電池・太陽光の入替診断 | `/b/` |
-| B（新規設置版） | 太陽光・蓄電池の設置診断 | `/b-new/` |
-| C | マドリノベ（窓・玄関） | `/c/` |
-| D | エコキュート交換 | `/d/` |
+## 現在版
+- https://keeeeei-soeda.github.io/tokai-ecolife-lp-preview/
 
-※ 修正指示書（10/28）では窓・玄関を「LP-D」と呼んでいますが、URLは呼称確定まで `/c/` のままです。
+## 旧デザイン（アーカイブ）
+- https://keeeeei-soeda.github.io/tokai-ecolife-lp-preview/v1/
 
-## 共通パーツ（`/shared/`）
-
-| ファイル | 内容 |
-|---|---|
-| `shared/top3.js` | おすすめメーカー トップ3のデータと描画。型番・写真・特徴文はこのファイルの `TOP3_MAKERS` を編集するだけで反映される。HTML側は `<div data-top3></div>` を置く |
-| `shared/track.js` | 計測。`window.dataLayer` に push（GTM等を入れればそのまま拾える）＋ localStorage に控え。`data-track="イベント名"` を付けた要素はクリックで自動記録 |
-| `shared/shared.css` | トップ3カード、素材待ちプレースホルダー（`.ph-img`）、LP間リンクのスタイル |
-
-## 計測イベント名
-
-| 接頭辞 | 対象 |
-|---|---|
-| `lpb_replace_` | LP-B 入替版 |
-| `lpb_new_` | LP-B 新規設置版 |
-| `lpc_` | 窓・玄関 |
-
-GitHub Pages: リポジトリの Pages 設定を参照。
+## ローカル確認
+```bash
+python3 -m http.server 4173
+# http://127.0.0.1:4173/
+```

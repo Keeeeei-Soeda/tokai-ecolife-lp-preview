@@ -1,0 +1,48 @@
+# 画像クレジット・出典
+
+最終更新：2026-10-28
+
+## 施工事例（`cases/`）
+
+出典：東海エコライフ公式サイトの施工事例（FTPSで `wp-content/uploads` から取得）。
+公開済み事例のみ使用。詳細ページは各LPのリンク先を参照。
+
+## フリー素材（`stock/`）
+
+Unsplash（商用利用可・クレジット任意だが明記）。製品固有のカタログ写真の代替として「イメージ」用途。
+
+| ファイル | 用途 | Unsplash |
+|---|---|---|
+| `window_condensation.jpg` | LP-C 結露イメージ | photo-1527482797697-8795b05a13fe |
+| `wall_damp.jpg` | LP-C 湿気・壁イメージ | photo-1584622650111-993a426fbf0a |
+| `solar_roof.jpg` | ヒーロー／トップ3 | photo-1509391366360-2e959784a276 |
+| `solar_panel.jpg` | トップ3 太陽光 | photo-1508514177221-188b1cf16e9d |
+| `modern_window.jpg` | LP-C／ヒーロー補完 | photo-1600585154340-be6161a56a0c |
+| `outdoor_unit.jpg` | トップ3 蓄電池イメージ | photo-1621905252507-b35492cc74b4 |
+| `house_exterior.jpg` | ヒーロー／トップ3 | photo-1570129477492-45c003edd2be |
+| `residential_solar.jpg` | LP-B 蓄電池パネルの背景（太陽光付き住宅街） | 東海エコライフより受領（2026-10-30）・出典【要確認】 |
+
+## 製品写真（`products/`）
+
+出典：東海エコライフより受領（2026-10-30）。
+メーカーへの使用許諾の状況：【要確認】
+
+| ファイル | 内容 | 使用箇所 |
+|---|---|---|
+| `tesla-powerwall3.jpg` | テスラ Powerwall 3（2台設置） | 蓄電池TOP3 1位 |
+| `tesla-powerwall3-2.jpg` | テスラ Powerwall 3（1台・車内から） | 未使用（予備） |
+| `nichicon-ess.jpg` | ニチコン ESS-T5/T6 蓄電池ユニット | 蓄電池TOP3 2位 |
+| `nichicon-ess-lineup.jpg` | ニチコン トライブリッド メインビジュアル（No.1表記等の文字入り） | 未使用（予備） |
+| `omron-kpbp-9kwh.jpg` | オムロン KPBP-A 9.7kWh（寸法・重量入り） | 蓄電池TOP3 3位 |
+| `omron-kpbp-13kwh.jpg` | オムロン KPBP-A 13.0kWh（寸法・重量入り） | 未使用（予備） |
+| `hesta-roof.jpg` | HESTAソーラー 傾斜屋根への設置例 | 太陽光TOP3 1位 |
+| `hesta-flatroof.jpg` | HESTAソーラー 陸屋根への設置例 | 未使用（予備） |
+| `canadian-tophiku6-465w.jpg` | カナディアンソーラー TOPHiKu6 モジュール（縦長・48TM-465相当） | 太陽光TOP3 2位 |
+| `canadian-tophiku6-350w.jpg` | カナディアンソーラー TOPHiKu6 モジュール（36TM-350相当） | 未使用（予備） |
+| `panasonic-system.jpg` | パナソニック 太陽電池モジュール・パワーステーション・蓄電池ユニットの構成図（文字入り） | 太陽光TOP3 3位 |
+| `panasonic-sochiku-system-t.jpg` | パナソニック 創蓄連携システムT 設置イメージ（パワコン＋蓄電池、キャプション入り） | 未使用（予備） |
+
+## まだ入れていないもの
+
+- メーカー公式カタログ写真・ロゴ（LIXIL / YKK AP / 三協アルミ / HESTA / Tesla 等）→ 使用許諾後に差し替え
+- キャラクター「補助金先生」→ 素材確定後
