@@ -385,6 +385,13 @@
   font-size: 1.05rem;
 }
 
+.maker-card .media-fill {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
 .maker-card__logo {
   aspect-ratio: 3 / 1;
   margin-bottom: 10px;
