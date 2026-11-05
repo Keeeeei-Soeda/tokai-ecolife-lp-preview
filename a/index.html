@@ -8,57 +8,62 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="../shared/unify.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../shared/shared.css">
+  <link rel="stylesheet" href="../shared/design.css?v=20261105">
 </head>
 <body class="lp-a">
   <div class="preview-banner" role="status">
     仮ページ（LP-A プレビュー）／本番未公開・検索非表示
   </div>
 
-  <header class="site-header">
-    <div class="inner site-header__inner">
-      <a class="site-header__brand" href="#top">東海エコライフ</a>
-      <p class="site-header__meta">東京支店　042-652-9777</p>
+  <header class="site-header" id="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-header__brand" href="#top">東海エコライフ<span>東京支店</span></a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="gnav">メニュー</button>
+      <nav class="gnav" id="gnav" aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#diagnose">無料診断</a></li>
+          <li><a href="#equipment">対象設備</a></li>
+          <li><a href="#subsidy">補助金</a></li>
+          <li><a href="#cases">事例</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__tel num" href="tel:0426529777">042-652-9777</a>
+      <a class="btn btn--primary site-header__cta" href="#diagnose">無料診断</a>
     </div>
   </header>
 
   <main id="top">
     <!-- S1 ファーストビュー -->
-    <section class="hero" style="--hero-image:url('../shared/img/stock/house_exterior.jpg')" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="inner hero__inner">
-        <div class="hero__copy">
-          <p class="hero__brand">東海エコライフ</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="media">
+        <img src="../shared/img/stock/residential_solar.jpg" alt="太陽光パネルが載った日本の住宅街" fetchpriority="high">
+      </div>
+      <div class="hero__inner">
+        <div class="wrap">
           <p class="hero__label">補助金先生の無料診断</p>
-          <p class="hero__brand">東海エコライフ</p>
-        <h1 id="hero-title" class="hero__title"><span class="nobr">お住まいで使える補助金、</span><br><span class="nobr">ぜんぶ調べます。</span></h1>
+          <h1 id="hero-title" class="hero__title"><span class="nobr">お住まいで使える補助金、</span><br><span class="nobr">ぜんぶ調べます。</span></h1>
           <p class="hero__lead">
             太陽光・蓄電池・エコキュート・V2H・窓・玄関ドア。<br>
-            国＋東京都＋お住まいの市区町村の制度から、<br class="sp-only">
-            あなたのお家に使える分だけを無料で診断します。
+            国＋東京都＋お住まいの市区町村の制度から、あなたのお家に使える分だけを無料で診断します。
           </p>
-          <a class="btn btn--primary" href="#diagnose">60秒の無料診断をはじめる</a>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#diagnose">60秒の無料診断をはじめる</a>
+          </div>
           <ul class="hero__trust">
             <li>東京都内全域に対応（東京支店）</li>
             <li>補助金の申請は当社が代行</li>
             <li>診断後に営業電話はしません</li>
           </ul>
         </div>
-        <div class="hero__visual">
-          <figure class="hero-photo">
-            <img src="../shared/img/stock/solar_roof.jpg" alt="屋根に設置された太陽光パネルのイメージ" width="720" height="900" loading="eager">
-          </figure>
-          <p class="hero-photo__cap">※イメージ写真です（施工事例は下のセクション）</p>
-        </div>
       </div>
     </section>
 
     <!-- S2 迷い -->
-    <section class="section worries" aria-labelledby="worries-title">
-      <div class="inner">
+    <section class="section band worries" aria-labelledby="worries-title">
+      <div class="wrap">
         <h2 id="worries-title" class="section__title">こんなことで迷っていませんか</h2>
         <ul class="worry-list">
           <li>電気代は上がり続けているが、何から手をつければいいか分からない</li>
@@ -76,7 +81,7 @@
 
     <!-- S3 診断とは -->
     <section class="section about" aria-labelledby="about-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="about-title" class="section__title">補助金先生の無料診断とは</h2>
         <ol class="steps">
           <li class="steps__item">
@@ -100,14 +105,14 @@
 
     <!-- S4 診断フォーム -->
     <section class="section diagnose" id="diagnose" aria-labelledby="diagnose-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="diagnose-title" class="section__title">60秒の無料診断</h2>
         <p class="section__lead">お名前・電話番号は不要です。4つの質問にお答えください。</p>
 
         <form id="diagnose-form" class="diagnose-form" novalidate>
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>1. お住まいの区市町村を選んでください</legend>
-            <select id="area" name="area" required>
+            <select id="area" class="input" name="area" required>
               <option value="">選択してください</option>
               <optgroup label="23区">
                 <option>千代田区</option><option>中央区</option><option>港区</option>
@@ -145,7 +150,7 @@
             </select>
           </fieldset>
 
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>2. 毎月の電気代はおおよそいくらですか</legend>
             <div class="choice-grid">
               <label><input type="radio" name="bill" value="〜1万円" required> 〜1万円</label>
@@ -155,7 +160,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>3. 戸建ての築年数を教えてください</legend>
             <div class="choice-grid">
               <label><input type="radio" name="age" value="〜10年" required> 〜10年</label>
@@ -165,7 +170,7 @@
             </div>
           </fieldset>
 
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>4. 気になる設備はどれですか（複数選択可）</legend>
             <div class="choice-grid choice-grid--equip">
               <label><input type="checkbox" name="equip" value="solar"> 太陽光発電</label>
@@ -209,8 +214,8 @@
     </section>
 
     <!-- S5 対象設備 -->
-    <section class="section equipment" id="equipment" aria-labelledby="equipment-title">
-      <div class="inner">
+    <section class="section band equipment" id="equipment" aria-labelledby="equipment-title">
+      <div class="wrap">
         <h2 id="equipment-title" class="section__title">対象設備</h2>
         <p class="section__lead">6つの設備すべてに対応しています。気になるものからご覧ください。</p>
         <div class="equip-grid">
@@ -251,8 +256,8 @@
     </section>
 
     <!-- S6 補助金の組み合わせ -->
-    <section class="section subsidy" id="subsidy" aria-labelledby="subsidy-title">
-      <div class="inner">
+    <section class="section band subsidy" id="subsidy" aria-labelledby="subsidy-title">
+      <div class="wrap">
         <h2 id="subsidy-title" class="section__title">補助金は「組み合わせ」で変わる</h2>
         <p class="section__lead">当社は、以下の補助金制度の登録事業者です。</p>
         <div class="table-wrap">
@@ -291,7 +296,7 @@
 
     <!-- S7 設備詳細 -->
     <section class="section detail" id="detail" aria-labelledby="detail-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="detail-title" class="section__title">設備ごとの目安</h2>
         <p class="section__note">太陽光・蓄電池・エコキュート・V2Hは、いずれも<strong>ほぼ1日で工事が完了</strong>します（太陽光と蓄電池の同時設置のみ、最大2日程度）。</p>
 
@@ -356,7 +361,7 @@
 
     <!-- S8 対応事例 -->
     <section class="section cases" id="cases" aria-labelledby="cases-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="cases-title" class="section__title">対応事例</h2>
         <p class="section__lead">ご提案・補助金申請・工事手配まで対応した事例です（公開中の事例のみ）。</p>
         <div class="case-grid">
@@ -388,23 +393,23 @@
         <p class="section__note">
           費用や補助金額など、詳しくはお気軽にお問い合わせください。ここに掲載しきれない過去の事例もございます。写真は公式HPの公開事例です。
         </p>
-        <p class="img-credit">フリー素材（ヒーロー）：Unsplash／施工写真：自社HP施工事例より</p>
+        <p class="img-credit">ヒーロー：受領写真（太陽光付き住宅街）／施工写真：自社HP施工事例より</p>
       </div>
     </section>
 
     <!-- S9 流れ -->
     <section class="section flow" id="flow" aria-labelledby="flow-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="flow-title" class="section__title">ご相談から工事までの流れ</h2>
         <ol class="flow-list">
-          <li><span>1</span><div><strong>無料診断（Web）</strong><p>60秒</p></div></li>
-          <li><span>2</span><div><strong>LINEで詳細をお届け</strong><p>当日〜翌日（20時頃までのお問い合わせは、ほとんど当日中）</p></div></li>
-          <li class="flow-list__pause"><span>—</span><div><p>ここで終了されても構いません</p></div></li>
-          <li><span>3</span><div><strong>現地調査</strong><p>提携施工会社と当社が同行／ご希望の日程</p></div></li>
-          <li><span>4</span><div><strong>お見積のご提示</strong><p>調査後にお伝えします</p></div></li>
-          <li><span>5</span><div><strong>ご契約・補助金申請</strong><p>当社がすべて代行（申請時期は制度により着工前・設置後など）</p></div></li>
-          <li><span>6</span><div><strong>工事</strong><p>提携施工会社が実施／設備により1日〜</p></div></li>
-          <li><span>7</span><div><strong>アフターフォロー</strong><p>導入後もご相談いただけます</p></div></li>
+          <li><h3>無料診断（Web）</h3><p>60秒</p></li>
+          <li><h3>LINEで詳細をお届け</h3><p>当日〜翌日（20時頃までのお問い合わせは、ほとんど当日中）</p></li>
+          <li class="flow-list__pause"><p>ここで終了されても構いません</p></li>
+          <li><h3>現地調査</h3><p>提携施工会社と当社が同行／ご希望の日程</p></li>
+          <li><h3>お見積のご提示</h3><p>調査後にお伝えします</p></li>
+          <li><h3>ご契約・補助金申請</h3><p>当社がすべて代行（申請時期は制度により着工前・設置後など）</p></li>
+          <li><h3>工事</h3><p>提携施工会社が実施／設備により1日〜</p></li>
+          <li><h3>アフターフォロー</h3><p>導入後もご相談いただけます</p></li>
         </ol>
         <p class="section__note">
           工事は、当社が品質を確認した提携施工会社が担当します。補助金の申請とメーカー選定は当社が一括で行います。
@@ -417,7 +422,7 @@
 
     <!-- S10 FAQ -->
     <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="faq-title" class="section__title">よくあるご質問</h2>
         <div class="faq-list">
           <details>
@@ -470,7 +475,7 @@
 
     <!-- S11 会社情報 -->
     <section class="section company" id="company" aria-labelledby="company-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="company-title" class="section__title">会社情報</h2>
         <dl class="company-list">
           <div><dt>会社名</dt><dd>東海エコライフ（東京支店）</dd></div>
@@ -490,7 +495,7 @@
 
     <!-- S12 最終CTA -->
     <section class="section final-cta" id="final" aria-labelledby="final-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="final-title" class="section__title"><span class="nobr">まずは、使える補助金を</span><span class="nobr">調べることから。</span></h2>
         <p class="section__lead">
           設備を決めるのはそのあとで構いません。<br>
@@ -508,9 +513,9 @@
           <h3>フォームで受け取る（仮）</h3>
           <p class="tiny">本番接続前のUI確認用です。送信はしません。</p>
           <form id="contact-dummy" class="contact-dummy">
-            <label>お名前 <input type="text" name="name" autocomplete="name"></label>
-            <label>メールまたは電話 <input type="text" name="contact" autocomplete="email"></label>
-            <label>ご相談内容 <textarea name="message" rows="3"></textarea></label>
+            <label>お名前 <input class="input" type="text" name="name" autocomplete="name"></label>
+            <label>メールまたは電話 <input class="input" type="text" name="contact" autocomplete="email"></label>
+            <label>ご相談内容 <textarea class="input" name="message" rows="3"></textarea></label>
             <button type="submit" class="btn btn--secondary">送信（デモ）</button>
             <p id="contact-msg" class="tiny" hidden></p>
           </form>
@@ -520,13 +525,16 @@
   </main>
 
   <footer class="site-footer">
-    <div class="inner">
+    <div class="wrap">
       <p>© 東海エコライフ　LP-A プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p>
     </div>
   </footer>
 
-  <a class="sticky-cta" href="#diagnose">無料診断をはじめる</a>
+  <div class="sticky-cta">
+    <a class="btn btn--primary" href="#diagnose">無料診断をはじめる</a>
+  </div>
 
+  <script src="../shared/ui.js?v=20261105"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

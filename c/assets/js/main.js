@@ -63,14 +63,6 @@
     resultWrap.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  if (sticky && diagnoseSection && "IntersectionObserver" in window) {
-    const io = new IntersectionObserver(
-      ([entry]) => sticky.classList.toggle("is-hidden", entry.isIntersecting),
-      { threshold: 0.2 }
-    );
-    io.observe(diagnoseSection);
-  }
-
   const contactForm = document.getElementById("contact-dummy");
   const contactMsg = document.getElementById("contact-msg");
   contactForm?.addEventListener("submit", (event) => {

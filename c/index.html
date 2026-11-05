@@ -8,43 +8,57 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="../shared/unify.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../shared/shared.css">
+  <link rel="stylesheet" href="../shared/design.css?v=20261105">
 </head>
 <body class="lp-c">
   <div class="preview-banner" role="status">仮ページ（LP-C プレビュー）／本番未公開・検索非表示／窓・玄関は施工実績なし</div>
-  <header class="site-header">
-    <div class="inner site-header__inner">
-      <a class="site-header__brand" href="#top">東海エコライフ</a>
-      <p class="site-header__meta">東京支店　042-652-9777</p>
+  <header class="site-header" id="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-header__brand" href="#top">東海エコライフ<span>東京支店</span></a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="gnav">メニュー</button>
+      <nav class="gnav" id="gnav" aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#worries">お悩み</a></li>
+          <li><a href="#methods">工法</a></li>
+          <li><a href="#makers">メーカー</a></li>
+          <li><a href="#price">費用</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__tel num" href="tel:0426529777">042-652-9777</a>
+      <a class="btn btn--primary site-header__cta" href="#diagnose">無料診断</a>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero" style="--hero-image:url('../shared/img/stock/modern_window.jpg')" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="inner">
-        <p class="hero__label">先進的窓リノベ2026 登録事業者</p>
-        <p class="hero__brand">東海エコライフ</p>
-        <h1 id="hero-title" class="hero__title"><span class="nobr">窓を変えると、</span><span class="nobr">部屋が変わる。</span></h1>
-        <p class="hero__lead">
-          結露・カビ、冬の底冷え、夏の暑さ、外の音、防犯。<br>
-          その悩みの多くは「窓」と「玄関」から。<br>
-          光熱費の削減にもつながります。
-        </p>
-        <a class="btn btn--primary" href="#diagnose" data-track="lpc_hero_cta_click">お悩みから選ぶ・無料診断</a>
-        <ul class="hero__trust">
-          <li>先進的窓リノベ2026事業 登録事業者</li>
-          <li>東京都の補助金にも対応</li>
-          <li>東京都内全域に対応（東京支店）</li>
-        </ul>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="media">
+        <img src="../shared/img/products/ykk-window.jpg" alt="大きな窓のあるリビング" fetchpriority="high">
+      </div>
+      <div class="hero__inner">
+        <div class="wrap">
+          <p class="hero__label">先進的窓リノベ2026 登録事業者</p>
+          <h1 id="hero-title" class="hero__title"><span class="nobr">窓を変えると、</span><span class="nobr">部屋が変わる。</span></h1>
+          <p class="hero__lead">
+            結露・カビ、冬の底冷え、夏の暑さ、外の音、防犯。<br>
+            その悩みの多くは「窓」と「玄関」から。光熱費の削減にもつながります。
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#diagnose" data-track="lpc_hero_cta_click">お悩みから選ぶ・無料診断</a>
+          </div>
+          <ul class="hero__trust">
+            <li>先進的窓リノベ2026事業 登録事業者</li>
+            <li>東京都の補助金にも対応</li>
+            <li>東京都内全域に対応（東京支店）</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="worries" aria-labelledby="worries-title">
-      <div class="inner">
+    <section class="section band" id="worries" aria-labelledby="worries-title">
+      <div class="wrap">
         <h2 id="worries-title" class="section__title">お悩みから選ぶ</h2>
         <div class="worry-grid">
           <a class="worry-card" href="#why" data-worry="結露・カビ">
@@ -73,7 +87,7 @@
     </section>
 
     <section class="section" id="why" aria-labelledby="why-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="why-title" class="section__title">なぜ窓なのか</h2>
         <p class="section__lead">
           家の熱は、その多くが窓などの開口部から出入りします。壁や床を工事するより、窓を変える方が、少ない費用で体感が大きく変わります。
@@ -81,8 +95,8 @@
       </div>
     </section>
 
-    <section class="section" id="methods" aria-labelledby="methods-title">
-      <div class="inner">
+    <section class="section band" id="methods" aria-labelledby="methods-title">
+      <div class="wrap">
         <h2 id="methods-title" class="section__title">工法の違い</h2>
         <p class="section__lead">大掛かりな全面リフォームではありません。</p>
         <div class="table-wrap">
@@ -102,7 +116,7 @@
     </section>
 
     <section class="section" id="makers" aria-labelledby="makers-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="makers-title" class="section__title">取扱メーカー</h2>
         <p class="section__lead">リクシル・YKK AP・三協アルミの窓・玄関ドアを取り扱っています。</p>
         <div class="maker-grid">
@@ -128,8 +142,8 @@
       </div>
     </section>
 
-    <section class="section" id="easy" aria-labelledby="easy-title">
-      <div class="inner">
+    <section class="section band" id="easy" aria-labelledby="easy-title">
+      <div class="wrap">
         <h2 id="easy-title" class="section__title">1窓から・最短1時間</h2>
         <p class="section__lead">
           家全体をやる必要はありません。気になる1部屋、1つの窓からでも始められます。<br>
@@ -143,7 +157,7 @@
     </section>
 
     <section class="section" id="price" aria-labelledby="price-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="price-title" class="section__title">費用の目安</h2>
         <div class="table-wrap">
           <table class="data-table">
@@ -161,8 +175,8 @@
       </div>
     </section>
 
-    <section class="section" id="subsidy" aria-labelledby="subsidy-title">
-      <div class="inner">
+    <section class="section band" id="subsidy" aria-labelledby="subsidy-title">
+      <div class="wrap">
         <h2 id="subsidy-title" class="section__title">補助金（登録事業者として申請を代行）</h2>
         <p>
           窓・玄関のリフォームは、国の補助金の対象です。当社は <strong>先進的窓リノベ2026事業の登録事業者</strong>です。東京都（クールネット東京）の制度とあわせて、使える補助金を診断から申請まで、すべて当社が代行します。
@@ -172,7 +186,7 @@
     </section>
 
     <section class="section" id="flow-image" aria-labelledby="image-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="image-title" class="section__title">工事の流れと仕上がりイメージ</h2>
         <p class="section__lead">窓・玄関はまだ施工実績がないため、事例写真は掲載しません。AI生成の施工写真も使いません。</p>
         <ol class="flow-mini">
@@ -186,7 +200,7 @@
     </section>
 
     <section class="section" id="door" aria-labelledby="door-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="door-title" class="section__title">玄関ドア</h2>
         <p class="section__lead">
           玄関ドアも、1日で交換できます。断熱性の高いドアに替えると、玄関からの冷気が抑えられ、家全体の暖かさが変わります。先進的窓リノベ2026事業の対象です。
@@ -195,7 +209,7 @@
     </section>
 
     <section class="section" id="energy" aria-labelledby="energy-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="energy-title" class="section__title">窓と玄関を変えると、光熱費も下がります。</h2>
         <p class="section__lead">
           断熱性の高い窓・玄関ドアに替えると、冷暖房の効きが良くなり、光熱費は10〜15%ほど削減できるとされています（目安）。
@@ -209,11 +223,11 @@
     </section>
 
     <section class="section diagnose" id="diagnose" aria-labelledby="diagnose-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="diagnose-title" class="section__title">お悩みから無料診断</h2>
         <p class="section__lead">お名前・電話番号は不要です。3つの質問です。</p>
         <form id="diagnose-form" class="diagnose-form" novalidate>
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>1. いまのお悩みは？（複数選択可）</legend>
             <div class="choice-grid">
               <label><input type="checkbox" name="worry" value="結露・カビ"> 結露・カビ</label>
@@ -223,7 +237,7 @@
               <label><input type="checkbox" name="worry" value="防犯"> 防犯</label>
             </div>
           </fieldset>
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>2. 気になる窓の数は？</legend>
             <div class="choice-grid">
               <label><input type="radio" name="count" value="1〜2窓" required> 1〜2窓</label>
@@ -232,9 +246,9 @@
               <label><input type="radio" name="count" value="玄関ドアも含む"> 玄関ドアも含む</label>
             </div>
           </fieldset>
-          <fieldset class="diagnose-form__field">
+          <fieldset class="field diagnose-form__field">
             <legend>3. お住まいの区市町村は？</legend>
-            <select id="area" name="area" required>
+            <select id="area" class="input" name="area" required>
               <option value="">選択してください</option>
               <optgroup label="23区">
                 <option>千代田区</option><option>中央区</option><option>港区</option>
@@ -294,23 +308,24 @@
     </section>
 
     <section class="section flow" id="flow" aria-labelledby="flow-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="flow-title" class="section__title">ご相談から工事までの流れ</h2>
         <ol class="flow-list">
-          <li><span>1</span><div><strong>無料診断（Web）</strong><p>お悩みと窓の数</p></div></li>
-          <li><span>2</span><div><strong>LINEで窓の写真</strong><p>当日〜翌日</p></div></li>
-          <li class="flow-list__pause"><span>—</span><div><p>ここで終了されても構いません</p></div></li>
-          <li><span>3</span><div><strong>現地調査</strong><p>提携施工会社と当社が同行</p></div></li>
-          <li><span>4</span><div><strong>お見積</strong><p></p></div></li>
-          <li><span>5</span><div><strong>ご契約・補助金申請</strong><p>当社が代行</p></div></li>
-          <li><span>6</span><div><strong>工事</strong><p>提携施工会社／1窓から可</p></div></li>
-          <li><span>7</span><div><strong>アフターフォロー</strong><p></p></div></li>
+          <li><h3>無料診断（Web）</h3><p>お悩みと窓の数</p></li>
+          <li><h3>LINEで窓の写真</h3><p>当日〜翌日（20時頃までのお問い合わせは、ほとんど当日中）</p></li>
+          <li class="flow-list__pause"><p>ここで終了されても構いません</p></li>
+          <li><h3>現地調査</h3><p>提携施工会社と当社が同行／ご希望の日程</p></li>
+          <li><h3>お見積</h3><p>調査後にお伝えします</p></li>
+          <li><h3>ご契約・補助金申請</h3><p>当社がすべて代行（申請時期は制度により着工前・設置後など）</p></li>
+          <li><h3>工事</h3><p>提携施工会社／1窓から可。内窓は最短1時間ほど</p></li>
+          <li><h3>アフターフォロー</h3><p>工事後もご相談いただけます</p></li>
         </ol>
+        <p class="section__note">工事は、当社が品質を確認した提携施工会社が担当します。補助金の申請とメーカー選定は当社が一括で行います。</p>
       </div>
     </section>
 
     <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="faq-title" class="section__title">よくあるご質問</h2>
         <div class="faq-list">
           <details><summary>診断を受けたら営業の電話が来ますか</summary><p>診断後に営業電話はしません。訪問はご希望の場合のみです。</p></details>
@@ -324,7 +339,7 @@
     </section>
 
     <section class="section company" id="company" aria-labelledby="company-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="company-title" class="section__title">会社情報</h2>
         <dl class="company-list">
           <div><dt>会社名</dt><dd>東海エコライフ（東京支店）</dd></div>
@@ -338,7 +353,7 @@
     </section>
 
     <section class="section final-cta" id="final" aria-labelledby="final-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="final-title" class="section__title">結露・カビ、寒さ、暑さ、音、防犯。まずは1窓から。</h2>
         <p class="section__lead">気になるお部屋の窓だけ、無料で診断します。補助金が使えるかも、その場でお調べします。</p>
         <a class="btn btn--primary" href="#diagnose" data-track="lpc_final_cta_click">お悩みから無料診断</a>
@@ -352,21 +367,24 @@
           <h3>フォームで受け取る（仮）</h3>
           <p class="tiny">本番接続前のUI確認用です。送信はしません。</p>
           <form id="contact-dummy" class="contact-dummy">
-            <label>お名前 <input type="text" name="name"></label>
-            <label>メールまたは電話 <input type="text" name="contact"></label>
-            <label>ご相談内容 <textarea name="message" rows="3"></textarea></label>
+            <label>お名前 <input class="input" type="text" name="name"></label>
+            <label>メールまたは電話 <input class="input" type="text" name="contact"></label>
+            <label>ご相談内容 <textarea class="input" name="message" rows="3"></textarea></label>
             <button type="submit" class="btn btn--secondary">送信（デモ）</button>
             <p id="contact-msg" class="tiny" hidden></p>
           </form>
         </div>
-        <p class="img-credit">結露・湿気・窓の写真：Unsplash（イメージ）。メーカー公式ロゴ・商品写真はカタログ許諾後に差し替え。窓・玄関の施工事例写真は実績準備後に追加予定です。</p>
+        <p class="img-credit">窓・玄関の写真は受領した製品イメージです。施工事例写真は実績ができてから追加します。</p>
       </div>
     </section>
   </main>
   <footer class="site-footer">
-    <div class="inner"><p>© 東海エコライフ　LP-C プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p></div>
+    <div class="wrap"><p>© 東海エコライフ　LP-C プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p></div>
   </footer>
-  <a class="sticky-cta" href="#diagnose">無料診断をはじめる</a>
+  <div class="sticky-cta">
+    <a class="btn btn--primary" href="#diagnose">無料診断をはじめる</a>
+  </div>
+  <script src="../shared/ui.js?v=20261105"></script>
   <script src="../shared/track.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>

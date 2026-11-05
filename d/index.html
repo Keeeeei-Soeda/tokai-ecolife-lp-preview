@@ -8,39 +8,48 @@
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="../shared/unify.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../shared/shared.css">
+  <link rel="stylesheet" href="../shared/design.css?v=20261105">
 </head>
 <body class="lp-d">
   <div class="preview-banner" role="status">
     仮ページ（LP-D プレビュー）／本番未公開・検索非表示
   </div>
 
-  <header class="site-header">
-    <div class="inner site-header__inner">
-      <a class="site-header__brand" href="#top">東海エコライフ</a>
-      <a class="site-header__phone" href="tel:0426529777">042-652-9777</a>
+  <header class="site-header" id="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-header__brand" href="#top">東海エコライフ<span>東京支店</span></a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="gnav">メニュー</button>
+      <nav class="gnav" id="gnav" aria-label="ページ内メニュー">
+        <ul>
+          <li><a href="#price">費用</a></li>
+          <li><a href="#subsidy">補助金</a></li>
+          <li><a href="#flow">交換の流れ</a></li>
+          <li><a href="#cases">事例</a></li>
+          <li><a href="#faq">よくあるご質問</a></li>
+        </ul>
+      </nav>
+      <a class="site-header__tel num" href="tel:0426529777">042-652-9777</a>
+      <a class="btn btn--primary site-header__cta" href="tel:0426529777">電話する</a>
     </div>
   </header>
 
   <main id="top">
     <!-- S1 -->
-    <section class="hero hero--urgent" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="inner hero__inner hero__inner--single">
-        <div class="hero__copy">
-          <p class="hero__brand">東海エコライフ</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="media">
+        <img src="../shared/img/cases/d1.jpg" alt="三菱のエコキュート室外機（あきる野市の施工事例）" fetchpriority="high">
+      </div>
+      <div class="hero__inner">
+        <div class="wrap">
           <p class="hero__label">給湯省エネ2026 登録事業者</p>
-          <p class="hero__brand">東海エコライフ</p>
-        <h1 id="hero-title" class="hero__title"><span class="nobr">エコキュートの交換、</span><br><span class="nobr">工事費・処分費コミコミ</span> <span class="price nobr">55万円〜</span></h1>
+          <h1 id="hero-title" class="hero__title"><span class="nobr">エコキュートの交換、</span><br><span class="nobr">工事費・処分費コミコミ</span> <span class="price nobr">55万円〜</span></h1>
           <p class="hero__lead">
             応急処置が可能な場合は、当日・翌日の工事にも対応します。<br>
-            他社で付けた機種もご相談ください（戸建てのみ）。<br>
-            型番が分からなくても大丈夫です。写真を送っていただければ確認します。
+            他社で付けた機種もご相談ください（戸建てのみ）。型番が分からなくても、写真を送っていただければ確認します。
           </p>
-          <div class="cta-row">
+          <div class="hero__actions">
             <a class="btn btn--phone" href="tel:0426529777">電話する　042-652-9777</a>
             <a class="btn btn--line" href="https://line.me/" target="_blank" rel="noopener">LINEで写真を送る</a>
           </div>
@@ -54,8 +63,8 @@
     </section>
 
     <!-- S2 -->
-    <section class="section" aria-labelledby="check-title">
-      <div class="inner">
+    <section class="section band" aria-labelledby="check-title">
+      <div class="wrap">
         <h2 id="check-title" class="section__title">お湯が出ないときのチェック</h2>
         <p class="section__lead">次を試しても戻らないときは、本体の寿命か故障のことが多いです。</p>
         <ol class="check-list">
@@ -76,7 +85,7 @@
 
     <!-- S3 -->
     <section class="section" id="price" aria-labelledby="price-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="price-title" class="section__title">交換費用の目安</h2>
         <p class="section__lead">工事費・処分費込みの目安です。現場の状況（配管・基礎・搬入）で変わります。</p>
         <div class="table-wrap">
@@ -108,8 +117,8 @@
     </section>
 
     <!-- S4 -->
-    <section class="section" id="area" aria-labelledby="area-title">
-      <div class="inner">
+    <section class="section band" id="area" aria-labelledby="area-title">
+      <div class="wrap">
         <h2 id="area-title" class="section__title">対応エリアと受付</h2>
         <ul class="info-cards">
           <li><strong>エリア</strong>東京都内の戸建て（東京支店）。マンションは対象外</li>
@@ -122,7 +131,7 @@
 
     <!-- S5 -->
     <section class="section" id="subsidy" aria-labelledby="subsidy-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="subsidy-title" class="section__title">使える補助金</h2>
         <p class="section__lead">申請は当社が代行します。</p>
         <div class="table-wrap">
@@ -143,15 +152,15 @@
 
     <!-- S6 -->
     <section class="section" id="flow" aria-labelledby="flow-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="flow-title" class="section__title">交換の流れ</h2>
         <ol class="flow-list">
-          <li><span>1</span><div><strong>電話または LINE（型番写真）</strong><p>当日〜翌日</p></div></li>
-          <li><span>2</span><div><strong>機種の選定・お見積</strong><p>写真が揃えば遠隔でも可。必要な場合は現地確認</p></div></li>
-          <li><span>3</span><div><strong>ご契約・補助金の手続き</strong><p>使う場合は制度により着工前</p></div></li>
-          <li><span>4</span><div><strong>工事（提携施工会社）</strong><p>ほぼ1日（応急対応可なら当日・翌日も可）</p></div></li>
-          <li><span>5</span><div><strong>古い機種の撤去・処分</strong><p>工事当日に提携施工会社が引き取り（費用は目安に含む）</p></div></li>
-          <li><span>6</span><div><strong>お湯が使えるようになる</strong><p>工事当日のうち</p></div></li>
+          <li><h3>電話または LINE（型番写真）</h3><p>当日〜翌日</p></li>
+          <li><h3>機種の選定・お見積</h3><p>写真が揃えば遠隔でも可。必要な場合は現地確認</p></li>
+          <li><h3>ご契約・補助金の手続き</h3><p>使う場合は制度により着工前</p></li>
+          <li><h3>工事（提携施工会社）</h3><p>ほぼ1日（応急対応可なら当日・翌日も可）</p></li>
+          <li><h3>古い機種の撤去・処分</h3><p>工事当日に提携施工会社が引き取り（費用は目安に含む）</p></li>
+          <li><h3>お湯が使えるようになる</h3><p>工事当日のうち</p></li>
         </ol>
         <p class="section__note">
           工事は、当社が品質を確認した提携施工会社が担当します。機種の選定と補助金の申請は当社が一括で行います。
@@ -160,8 +169,8 @@
     </section>
 
     <!-- S7 -->
-    <section class="section" id="other" aria-labelledby="other-title">
-      <div class="inner">
+    <section class="section band" id="other" aria-labelledby="other-title">
+      <div class="wrap">
         <h2 id="other-title" class="section__title">他社で付けた機種でも相談できます</h2>
         <p class="section__lead">
           他社で設置されたエコキュート・電気温水器・ガス給湯器からの交換もご相談ください。<br>
@@ -175,50 +184,25 @@
     </section>
 
     <!-- S8 -->
-    <section class="section" id="cases" aria-labelledby="cases-title">
-      <div class="inner">
+    <section class="section cases" id="cases" aria-labelledby="cases-title">
+      <div class="wrap">
         <h2 id="cases-title" class="section__title">対応事例</h2>
-        <p class="section__lead">公開中の事例のみ掲載。施工金額は非公開です。</p>
+        <p class="section__lead">エコキュートの室外機が写っている公開事例です。施工金額は非公開です。</p>
         <div class="case-grid">
           <article class="case-card">
-            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d1.jpg" alt="あきる野市 S様邸の施工写真" loading="lazy" width="800" height="600"></div>
+            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d1.jpg" alt="あきる野市の三菱エコキュート" loading="lazy" width="800" height="600"></div>
             <p class="case-card__area">あきる野市</p>
-            <p>オール電化（三菱）</p>
-          </article>
-          <article class="case-card">
-            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d2.jpg" alt="日野市 K様邸の施工写真" loading="lazy" width="800" height="600"></div>
-            <p class="case-card__area">日野市</p>
-            <p>蓄電池・オール電化（長州産業）</p>
-          </article>
-          <article class="case-card">
-            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d3.jpg" alt="小平市 O様邸の施工写真" loading="lazy" width="800" height="600"></div>
-            <p class="case-card__area">小平市</p>
-            <p>蓄電池・オール電化</p>
-          </article>
-          <article class="case-card">
-            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d4.jpg" alt="西多摩郡 Y様邸の施工写真" loading="lazy" width="800" height="600"></div>
-            <p class="case-card__area">西多摩郡</p>
-            <p>蓄電池</p>
-          </article>
-          <article class="case-card">
-            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d5.jpg" alt="東久留米市 T様邸の施工写真" loading="lazy" width="800" height="600"></div>
-            <p class="case-card__area">東久留米市</p>
-            <p>蓄電池</p>
-          </article>
-          <article class="case-card">
-            <div class="case-card__media"><img class="case-card__img" src="../shared/img/cases/d6.jpg" alt="小平市の施工写真" loading="lazy" width="800" height="600"></div>
-            <p class="case-card__area">小平市</p>
-            <p>蓄電池・オール電化</p>
+            <p>オール電化（三菱のエコキュート）</p>
           </article>
         </div>
-        <p class="section__note">費用や補助金額など、詳しくはお気軽にお問い合わせください。ここに掲載しきれない過去の事例もございます。写真は公式HPの公開事例（実写）です。</p>
-        <p class="img-credit">施工写真：自社HP施工事例より（FTPS取得）</p>
+        <p class="section__note">太陽光パネルや蓄電池だけの写真は、このページでは使っていません。費用や補助金額はお問い合わせください。</p>
+        <p class="img-credit">施工写真：自社HP施工事例より</p>
       </div>
     </section>
 
     <!-- S9 FAQ -->
     <section class="section faq" id="faq" aria-labelledby="faq-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="faq-title" class="section__title">よくあるご質問</h2>
         <div class="faq-list">
           <details><summary>今の機種が分かりません</summary><p>リモコンか本体のシールを写真で送ってください。分からなくても相談できます。</p></details>
@@ -239,7 +223,7 @@
 
     <!-- S10 -->
     <section class="section final-cta" id="final" aria-labelledby="final-title">
-      <div class="inner">
+      <div class="wrap">
         <h2 id="final-title" class="section__title">お湯のことでお困りなら、まずお電話ください。</h2>
         <a class="btn btn--phone btn--xl" href="tel:0426529777">042-652-9777</a>
         <p class="final-phone">9:00〜18:00（土日祝も受付）</p>
@@ -267,9 +251,9 @@
           <h3>フォームで送る（仮）</h3>
           <p class="tiny">本番接続前のUI確認用です。送信はしません。</p>
           <form id="contact-dummy" class="contact-dummy">
-            <label>お名前 <input type="text" name="name" autocomplete="name"></label>
-            <label>電話またはメール <input type="text" name="contact"></label>
-            <label>状況・型番など <textarea name="message" rows="3"></textarea></label>
+            <label>お名前 <input class="input" type="text" name="name" autocomplete="name"></label>
+            <label>電話またはメール <input class="input" type="text" name="contact"></label>
+            <label>状況・型番など <textarea class="input" name="message" rows="3"></textarea></label>
             <button type="submit" class="btn btn--secondary">送信（デモ）</button>
             <p id="contact-msg" class="tiny" hidden></p>
           </form>
@@ -279,13 +263,17 @@
   </main>
 
   <footer class="site-footer">
-    <div class="inner">
+    <div class="wrap">
       <p>© 東海エコライフ　LP-D プレビュー　｜　<a href="../" style="color:#cfd5d1">一覧へ</a></p>
     </div>
   </footer>
 
-  <a class="sticky-cta sticky-cta--phone" href="tel:0426529777">電話する　042-652-9777</a>
+  <div class="sticky-cta">
+    <a class="btn btn--ghost-dark" href="https://line.me/" target="_blank" rel="noopener">LINE</a>
+    <a class="btn btn--phone" href="tel:0426529777">電話する</a>
+  </div>
 
+  <script src="../shared/ui.js?v=20261105"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

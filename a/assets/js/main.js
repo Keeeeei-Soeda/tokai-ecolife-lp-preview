@@ -154,16 +154,7 @@
     resultWrap.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  // 追従CTA：診断セクションが見えているときは隠す
-  if (sticky && diagnoseSection && "IntersectionObserver" in window) {
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        sticky.classList.toggle("is-hidden", entry.isIntersecting);
-      },
-      { threshold: 0.2 }
-    );
-    io.observe(diagnoseSection);
-  }
+  // 追従CTAの表示は shared/ui.js が担当
 
   // ダミー問い合わせフォーム
   const contactForm = document.getElementById("contact-dummy");
