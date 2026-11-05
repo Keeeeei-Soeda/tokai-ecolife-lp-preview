@@ -35,9 +35,9 @@ window.TOP3_MAKERS = {
         url: "https://hestasolar.com/",
         // 製品カタログ写真は許諾前のため、フリー素材のイメージ写真を仮置き
         // 製品写真：東海エコライフより受領（2026-10-30）
-        image: "../shared/img/products/hesta-roof.jpg",
-        imageFit: "cover",
-        imageLabel: "HESTAソーラーの設置例",
+        image: "../shared/img/products/hesta-product-white.png",
+        imageFit: "contain",
+        imageLabel: "HESTAソーラーの製品写真",
       },
       {
         maker: "カナディアンソーラー",
@@ -85,9 +85,9 @@ window.TOP3_MAKERS = {
         subsidy: "国・東京都の補助金対象（SII登録済み）",
         url: "https://www.tesla.com/ja_jp/powerwall",
         // 製品写真：東海エコライフより受領（2026-10-30、メーカー公式サイト掲載画像）
-        image: "../shared/img/products/tesla-powerwall3.jpg",
+        image: "../shared/img/products/tesla-powerwall3-house.png",
         imageFit: "cover",
-        imageLabel: "Powerwall 3 の設置イメージ",
+        imageLabel: "Powerwall 3 の設置例",
       },
       {
         maker: "ニチコン",
@@ -105,9 +105,9 @@ window.TOP3_MAKERS = {
         subsidy: null,
         url: "https://www.nichicon.co.jp/products/ess/t5t6system/",
         // 製品写真：東海エコライフより受領（2026-10-30、メーカー公式サイト掲載画像）
-        image: "../shared/img/products/nichicon-ess.jpg",
+        image: "../shared/img/products/nichicon-t5t6-decided.jpg",
         imageFit: "contain",
-        imageLabel: "ESS-T5／T6シリーズ 蓄電池ユニット",
+        imageLabel: "ニチコン T5／T6シリーズ",
       },
       {
         maker: "オムロン・長州産業",
@@ -120,9 +120,9 @@ window.TOP3_MAKERS = {
         subsidy: null,
         url: "https://socialsolution.omron.com/jp/ja/products_service/energy/product/bt/kpbp.html",
         // 製品写真：東海エコライフより受領（2026-10-30、メーカー公式サイト掲載画像）
-        image: "../shared/img/products/omron-kpbp-9kwh.jpg",
+        image: "../shared/img/products/choshu-cic-battery.png",
         imageFit: "contain",
-        imageLabel: "KPBP-Aシリーズ 9.7kWh（KP-BU97C-A）",
+        imageLabel: "長州産業の蓄電池",
       },
     ],
   },
