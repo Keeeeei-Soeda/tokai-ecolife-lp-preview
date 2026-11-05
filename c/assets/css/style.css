@@ -870,6 +870,15 @@ a:hover {
 }
 
 @media (max-width: 639px) {
+  .worry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .worry-card,
+  .worry-card:nth-child(n + 4) {
+    grid-column: auto;
+  }
+
   .sp-only {
     display: inline;
   }
@@ -882,20 +891,29 @@ a:hover {
 .worry-grid {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   margin-bottom: 8px;
 }
 .worry-card {
-  display: block;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
   padding: 22px 18px;
   border-radius: var(--radius);
   background: #fff;
   box-shadow: var(--shadow);
   text-decoration: none;
-  color: inherit;
+  color: var(--ink);
   font-weight: 700;
   text-align: center;
   border: 1px solid transparent;
+  word-break: keep-all;
+  line-break: strict;
+}
+.worry-card:nth-child(n + 4) {
+  grid-column: span 3;
 }
 .worry-card:hover {
   border-color: var(--green);

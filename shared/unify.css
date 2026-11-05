@@ -191,15 +191,24 @@ body {
   background: #eef3f2;
 }
 
-.final-cta {
-  background: linear-gradient(135deg, #17212b, #2e6b73);
-  color: #fff;
+.section.final-cta {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(242, 169, 0, 0.16), transparent 46%),
+    linear-gradient(180deg, #f7f8f6, #e7eeeb);
+  color: var(--ink);
 }
 
-.final-cta .section__title,
-.final-cta .section__lead,
-.final-cta a {
-  color: #fff;
+.section.final-cta .section__title,
+.section.final-cta .section__lead,
+.section.final-cta .hero__trust,
+.section.final-cta .final-phone,
+.section.final-cta .crosslink,
+.section.final-cta .img-credit {
+  color: var(--ink);
+}
+
+.section.final-cta a {
+  color: var(--glass, #2e6b73);
 }
 
 .final-cta .btn--primary {
