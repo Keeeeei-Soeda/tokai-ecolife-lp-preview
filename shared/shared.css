@@ -373,6 +373,9 @@
 }
 
 .maker-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 18px;
   border-radius: var(--radius);
   background: #fff;
@@ -381,6 +384,7 @@
 
 .maker-card__name {
   margin: 0 0 10px;
+  min-height: 1.6em;
   font-weight: 800;
   font-size: 1.05rem;
 }
@@ -388,8 +392,13 @@
 .maker-card .media-fill {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  flex-shrink: 0;
+}
+
+.maker-card .img-caption {
+  min-height: 2.6em;
 }
 
 .maker-card__logo {
@@ -398,7 +407,8 @@
 }
 
 .maker-card__dealer {
-  margin: 10px 0 0;
+  margin: auto 0 0;
+  padding-top: 10px;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--green-dark);
@@ -414,7 +424,7 @@ img.top3-card__img {
 }
 
 .maker-grid {
-  align-items: start;
+  align-items: stretch;
 }
 
 /* 改行位置の調整（語の途中で折り返さない） */
