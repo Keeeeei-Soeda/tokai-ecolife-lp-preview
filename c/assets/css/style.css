@@ -899,6 +899,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
   min-height: 100%;
   padding: 22px 18px;
   border-radius: var(--radius);
@@ -909,8 +910,15 @@ a:hover {
   font-weight: 700;
   text-align: center;
   border: 1px solid transparent;
-  word-break: keep-all;
-  line-break: strict;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.worry-card__title,
+.worry-card__text,
+.worry-card .ph-note {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 .worry-card:nth-child(n + 4) {
   grid-column: span 3;
