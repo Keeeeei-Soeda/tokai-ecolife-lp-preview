@@ -639,6 +639,19 @@ textarea.input { min-height: 120px; resize: vertical; }
 }
 .flow-list__pause p { margin: 0; color: var(--ink); font-weight: 700; }
 
+.flow-perk {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: #fff6e0;
+  border: 1px solid var(--sun);
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+
 @media (max-width: 900px) {
   .flow-list { grid-template-columns: 1fr; gap: 28px; }
   .flow-list__pause { grid-column: auto; }
