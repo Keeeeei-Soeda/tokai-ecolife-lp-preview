@@ -593,19 +593,36 @@ textarea.input { min-height: 120px; resize: vertical; }
    ⑨ 流れ（番号は CSS カウンターで振る。区切り行は番号なし）
    ========================================================= */
 .flow { padding-top: 0; }
-.flow-list {
+.flow-list,
+.flow-list.flow-list--survey-goal {
   margin-top: 40px;
   list-style: none;
   counter-reset: step;
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 36px 0;
-  align-items: start;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  gap: 32px;
+  align-items: stretch;
+  max-width: 720px;
+  grid-template-columns: none !important;
 }
-.flow-list li { position: relative; padding-right: 20px; }
-.flow-list li:not(.flow-list__pause) { counter-increment: step; }
-.flow-list li:not(.flow-list__pause)::before {
+.flow-list > li {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px;
+  width: 100%;
+  padding: 0 0 0 64px;
+  min-height: 44px;
+  grid-column: auto !important;
+  box-sizing: border-box;
+}
+.flow-list > li:not(.flow-list__pause) { counter-increment: step; }
+.flow-list > li:not(.flow-list__pause)::before {
   content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
   display: grid;
   place-items: center;
   width: 44px;
@@ -616,29 +633,30 @@ textarea.input { min-height: 120px; resize: vertical; }
   font-family: var(--font-num);
   font-weight: 800;
 }
-.flow-list li:not(.flow-list__pause)::after {
+.flow-list > li:not(.flow-list__pause)::after {
   content: "";
   position: absolute;
-  top: 22px;
-  left: 52px;
-  right: 8px;
-  height: 1px;
+  top: 52px;
+  bottom: -24px;
+  left: 22px;
+  width: 1px;
   background: var(--line);
 }
-.flow-list li:last-child::after,
-.flow-list li:has(+ .flow-list__pause)::after { display: none; }
-.flow-list h3 { margin-top: 14px; font-size: 18px; }
+.flow-list > li:last-child::after { display: none; }
+.flow-list h3 { margin-top: 8px; font-size: 18px; }
 .flow-list p { margin-top: 4px; font-size: 15px; line-height: 1.75; color: var(--muted); }
-.flow-list__pause {
-  grid-column: span 3;
-  align-self: center;
-  padding: 18px 24px !important;
+.flow-list__body { min-width: 0; width: 100%; }
+.flow-list__pause-inline {
+  display: inline-block;
+  margin-top: 12px !important;
+  padding: 10px 14px;
   border: 1px dashed var(--sun-deep);
   border-radius: 10px;
   background: rgba(242, 169, 0, 0.08);
+  color: var(--ink) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
 }
-.flow-list__pause p { margin: 0; color: var(--ink); font-weight: 700; }
-
 .flow-perk {
   display: block;
   margin-top: 8px;
@@ -650,15 +668,37 @@ textarea.input { min-height: 120px; resize: vertical; }
   font-weight: 700;
   font-size: 14px;
 }
-
-
-@media (max-width: 900px) {
-  .flow-list { grid-template-columns: 1fr; gap: 28px; }
-  .flow-list__pause { grid-column: auto; }
-  .flow-list li:not(.flow-list__pause) { padding: 0 0 0 64px; min-height: 44px; }
-  .flow-list li:not(.flow-list__pause)::before { position: absolute; left: 0; top: 0; }
-  .flow-list li:not(.flow-list__pause)::after { top: 52px; bottom: -24px; left: 22px; right: auto; width: 1px; height: auto; }
-  .flow-list h3 { margin-top: 8px; }
+.flow-list__goal {
+  padding: 20px 20px 20px 64px !important;
+  border: 2px solid var(--sun);
+  border-radius: 14px;
+  background: #fffaf0;
+  box-shadow: 0 0 0 4px rgba(240, 140, 0, 0.12);
+}
+.flow-list__goal::before {
+  left: 10px !important;
+  top: 18px !important;
+  background: var(--sun) !important;
+  color: var(--ink) !important;
+}
+.flow-list__goal::after {
+  left: 32px !important;
+  top: 70px !important;
+}
+.flow-list__goal-label {
+  margin: 0 0 4px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em;
+  color: var(--sun-deep) !important;
+}
+.flow-list__after { opacity: 0.92; }
+.flow-list__after h3 { font-size: 16px; color: var(--muted); }
+.flow-cap-note {
+  margin-top: 8px !important;
+  font-size: 13px !important;
+  color: var(--muted) !important;
+  font-weight: 500 !important;
 }
 
 /* =========================================================

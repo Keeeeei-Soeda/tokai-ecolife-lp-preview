@@ -600,24 +600,32 @@ textarea.input { min-height: 120px; resize: vertical; }
    ⑨ 流れ（番号は CSS カウンターで振る。区切り行は番号なし）
    ========================================================= */
 .flow { padding-top: 0; }
-.flow-list {
+/* 工程は必ず1列縦積み（横並び禁止） */
+.flow-list,
+.flow-list.flow-list--survey-goal {
   margin-top: 40px;
   list-style: none;
   counter-reset: step;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  gap: 32px;
   align-items: stretch;
-  max-width: 960px;
+  max-width: 720px;
+  grid-template-columns: none !important;
 }
 .flow-list > li {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 280px);
-  gap: 20px 28px;
-  align-items: start;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
   padding: 0 0 0 64px;
   min-height: 44px;
+  grid-column: auto !important;
+  grid-template-columns: none !important;
+  box-sizing: border-box;
 }
 .flow-list > li:not(.flow-list__pause) { counter-increment: step; }
 .flow-list > li:not(.flow-list__pause)::before {
@@ -634,12 +642,13 @@ textarea.input { min-height: 120px; resize: vertical; }
   color: var(--white);
   font-family: var(--font-num);
   font-weight: 800;
+  z-index: 1;
 }
 .flow-list > li:not(.flow-list__pause)::after {
   content: "";
   position: absolute;
   top: 52px;
-  bottom: -20px;
+  bottom: -24px;
   left: 22px;
   width: 1px;
   background: var(--line);
@@ -647,9 +656,11 @@ textarea.input { min-height: 120px; resize: vertical; }
 .flow-list > li:last-child::after { display: none; }
 .flow-list h3 { margin-top: 8px; font-size: 18px; }
 .flow-list p { margin-top: 4px; font-size: 15px; line-height: 1.75; color: var(--muted); }
-.flow-list__body { min-width: 0; }
+.flow-list__body { min-width: 0; width: 100%; }
 .flow-list__media {
   margin: 0;
+  width: 100%;
+  max-width: 560px;
   border-radius: 12px;
   overflow: hidden;
   background: var(--paper);
@@ -660,9 +671,6 @@ textarea.input { min-height: 120px; resize: vertical; }
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-.flow-list > li:not(:has(.flow-list__media)) {
-  grid-template-columns: 1fr;
 }
 .flow-list__pause {
   display: block;
@@ -698,11 +706,8 @@ textarea.input { min-height: 120px; resize: vertical; }
   font-size: 14px;
 }
 
-.flow-list--survey-goal {
-  grid-template-columns: 1fr;
-}
 .flow-list__goal {
-  padding: 20px 18px 18px 64px !important;
+  padding: 20px 20px 20px 64px !important;
   border: 2px solid var(--sun);
   border-radius: 14px;
   background: #fffaf0;
@@ -749,23 +754,25 @@ textarea.input { min-height: 120px; resize: vertical; }
   border-radius: 12px;
 }
 
-/* 工事の流れ（縦並び＋横に画像） */
+/* 工事の流れ：工程ごとに縦積み（テキストの下に画像） */
 .work-steps {
   margin-top: 36px;
   list-style: none;
   counter-reset: work;
-  display: grid;
-  gap: 24px;
-  max-width: 960px;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 28px;
+  max-width: 720px;
 }
 .work-step {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 280px);
-  gap: 20px 28px;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px;
+  width: 100%;
   padding: 0 0 0 64px;
   counter-increment: work;
+  box-sizing: border-box;
 }
 .work-step::before {
   content: counter(work);
@@ -786,7 +793,7 @@ textarea.input { min-height: 120px; resize: vertical; }
   content: "";
   position: absolute;
   top: 52px;
-  bottom: -16px;
+  bottom: -20px;
   left: 22px;
   width: 1px;
   background: var(--line);
@@ -804,6 +811,8 @@ textarea.input { min-height: 120px; resize: vertical; }
 }
 .work-step__media {
   margin: 0;
+  width: 100%;
+  max-width: 560px;
   border-radius: 12px;
   overflow: hidden;
   background: var(--paper);
@@ -814,16 +823,6 @@ textarea.input { min-height: 120px; resize: vertical; }
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
-
-@media (max-width: 900px) {
-  .flow-list > li,
-  .work-step {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .flow-list__media,
-  .work-step__media { max-width: 420px; }
 }
 
 /* =========================================================
