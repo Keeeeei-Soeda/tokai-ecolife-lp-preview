@@ -9,8 +9,8 @@
   --ink-soft: #2a3743;   /* 画像の読み込み前の背景 */
   --paper: #f4f6f5;      /* 明るいセクション背景 */
   --white: #fff;
-  --sun: #f2a900;        /* 主CTA */
-  --sun-deep: #c98a00;
+  --sun: #f08c00;        /* 主CTA（お見積り無料・無料診断系） */
+  --sun-deep: #d97706;
   --glass: #2e6b73;      /* リンク・補助色 */
   --line: #d9dfdd;
   --muted: #5b6670;
@@ -658,14 +658,67 @@ textarea.input { min-height: 120px; resize: vertical; }
   font-size: 14px;
 }
 
+.flow-list--survey-goal {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.flow-list--survey-goal .flow-list__pause {
+  grid-column: span 2;
+}
+.flow-list__goal {
+  grid-column: span 2;
+  padding: 20px 18px 18px !important;
+  border: 2px solid var(--sun);
+  border-radius: 14px;
+  background: #fffaf0;
+  box-shadow: 0 0 0 4px rgba(240, 140, 0, 0.12);
+}
+.flow-list__goal::before {
+  background: var(--sun) !important;
+  color: var(--ink) !important;
+}
+.flow-list__goal-label {
+  margin: 0 0 4px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.06em;
+  color: var(--sun-deep) !important;
+}
+.flow-list__after {
+  grid-column: span 2;
+  opacity: 0.92;
+}
+.flow-list__after h3 {
+  font-size: 16px;
+  color: var(--muted);
+}
+.flow-cap-note {
+  margin-top: 8px !important;
+  font-size: 13px !important;
+  color: var(--muted) !important;
+  font-weight: 500 !important;
+}
+.ai-trial-figure {
+  margin-top: 36px;
+  max-width: 840px;
+}
+.ai-trial-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
 
 @media (max-width: 900px) {
   .flow-list { grid-template-columns: 1fr; gap: 28px; }
-  .flow-list__pause { grid-column: auto; }
+  .flow-list__pause,
+  .flow-list--survey-goal .flow-list__pause,
+  .flow-list__goal,
+  .flow-list__after { grid-column: auto; }
   .flow-list li:not(.flow-list__pause) { padding: 0 0 0 64px; min-height: 44px; }
   .flow-list li:not(.flow-list__pause)::before { position: absolute; left: 0; top: 0; }
   .flow-list li:not(.flow-list__pause)::after { top: 52px; bottom: -24px; left: 22px; right: auto; width: 1px; height: auto; }
   .flow-list h3 { margin-top: 8px; }
+  .flow-list__goal { padding-left: 64px !important; }
 }
 
 /* =========================================================
