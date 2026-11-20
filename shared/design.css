@@ -1021,13 +1021,27 @@ select.input { appearance: auto; }
   margin-top: 28px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 24px 16px;
+  align-items: start;
+}
+.image-row figure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  min-width: 0;
 }
 .image-row img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: var(--radius);
+}
+.image-row .img-caption {
+  margin: 0;
+  line-height: 1.5;
 }
 .maker-card { border: 1px solid var(--line); box-shadow: none; }
 
